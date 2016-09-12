@@ -1,0 +1,62 @@
+     DECLARE                        @gr int,                  /*ИД группы*/
+                                    @sem int,               /*№ семестра*/ 
+                                    @contr int,              /* ИД вида контроля (одного из рейтингов)*/
+					@dt1 datetime, @dt2 datetime
+                                    SET @dt1 ='02.10.2015'      /* начальная дата учета рапортичек*/
+                                    SET @dt2 ='03.12.2015'       /* конечная дата учета рапортичек*/
+
+SET @gr = 1340--1716
+SET @sem = 1
+SET @contr = 1 -- 1 -первый рейтинг, 2 - второй рейтинг
+
+
+select st.student_id, 
+	st.student_surname, 
+	st.student_firstname, 
+	st.student_secondname,  
+	--PERS_SURNAME ,
+	sub.subject_name,
+	--b.Б1 as 'Текущий рейтинг 1',
+	b.Б2 as 'Текущий рейтинг контроль',
+	b.B as 'Рубежный рейтинг контроль', 
+	b.Б as 'Отработки',
+	b.[2p] as 'Вторая попытка'
+from DEKANAT.ReitUspev b inner join DEKANAT.students st on st.student_id=b.student_id
+				inner join INFO.SUBJECT sub on b.subject_id = sub.subject_id
+where  (st.student_group_id =@gr ) and 
+       (b.sem_id =@sem ) and 
+       (b.control_id=@contr)
+
+order by 7-- and uspev_confirm <> 1 
+       -- and nagruz_subject_type_id = c.subject_type_id
+
+--select uspev_student_id, uspev_group_id, uspev_subject_id, uspev_control_id, uspev_data1,uspev_sem_id, uspev_rezult, uspev_attend, st.student_surname, st.student_firstname,st.student_secondname, sub.subject_name, uspev_rreit,
+
+/*
+select st.student_id, 
+	st.student_surname, 
+	st.student_firstname, 
+	st.student_secondname,  
+	PERS_SURNAME ,
+	sub.subject_name,
+	b.B,
+	b.[Б]  
+from DEKANAT.ReitUspev b inner join DEKANAT.students st on st.student_id=b.student_id
+                     inner join INFO.SUBJECT sub on b.subject_id = sub.subject_id
+                     inner join nagruzka_nagruz n on n.nagruz_group_id = group_id and
+                                                     nagruz_subject_id = subject_id and
+                                                     nagruz_sem_id = sem_id
+	       inner join kadry_personal p on n.nagruz_kadry_id=p.pers_id	
+                     inner join DEKANAT.control c on control_id = control_id 
+                     left outer join DEKANAT.raport r on uspev_stud_id = r.student_id  and  raport_data between @dt1 and @dt2
+where  (st.student_otchislen=0) and 
+       (st.student_group_id =@gr ) and 
+       (b.sem_id =@sem ) and 
+       (b.control_id=@contr)-- and uspev_confirm <> 1 
+        and nagruz_subject_type_id = c.subject_type_id
+group by student_id, st.student_surname, st.student_firstname , st.student_secondname, PERS_SURNAME, subject_name--, uspev_rezult, uspev_attend
+        
+        
+order by st.student_surname, st.student_firstname,st.student_secondname
+
+*/

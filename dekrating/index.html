@@ -1,0 +1,1951 @@
+﻿<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!--[if lte IE 8]>
+       <style type="text/css">
+        .header h4{
+        display: none;
+        }
+        .menu{
+        display: none;
+        }
+        #selYear, #container, .otherbr{
+        display: none;
+        }
+        .header{
+        display: none;
+        }
+        .logo_img{
+        width: 150px;
+        }
+        .ie_head{
+        width: 100%;
+        background-color: #06c;
+        color: white;
+        }
+        .alltable{
+            margin-top: 20px;
+            display: block;
+        }
+    .table_rait td:hover{
+
+    }
+        .alltable td{
+        padding-right: 60px;
+        padding-left: 20px;
+
+        }
+        h2{
+        background-color: white;
+        color: #06c;
+        padding: 20px;
+        font-size: xx-large;
+        }
+    h3{
+    color: #06c;
+    padding: 20px;
+    }
+        .tgraph{
+        color: white;
+        padding: 10px;
+        font-size: 18px;
+        }
+        a.tgraph:visited{
+        color: white;
+        }
+      </style>
+      <![endif]-->
+    <title>Рейтинг деканатов | СКГМИ</title>
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script>
+        function graph() {
+            $('#graphic').highcharts({
+                title: {
+                    text: 'Интегральный рейтинг деканатов',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: 'СКГМИ',
+                    x: -20
+                },
+                xAxis: {
+                    title: {
+                        text: 'Год',
+                        style: {
+                            fontWeight: 'bold',
+                        }
+                    },
+
+                    categories: ['2010', '2011', '2012', '2013', '2014', '2015'],
+                    labels: {
+                        style: {
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                yAxis: {
+                    labels: {
+                        style: {
+                            fontWeight: 'bold'
+                        }
+                    },
+                    max: 9,
+                    min: 1,
+                    reversed: true,
+                    title: {
+                        text: 'Рейтинг',
+                        style: {
+                            fontWeight: 'bold'
+                        },
+                    },
+                    tickInterval: 1,
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    valueSuffix: '',
+                    crosshairs: false
+                },
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    borderWidth: 0
+                },
+                series: [{
+                    name: 'ФИТ',
+                    data: [1, 1, 2, 1, 3, 3]
+                }, {
+                    name: 'ЭМФ',
+                    data: [8, 8, 9, 9, 9, 6]
+                }, {
+                    name: 'ФЭТ',
+                    data: [2, 2, 1, 2, 1, 1]
+                }, {
+                    name: 'ЮФ',
+                    data: [5, 9, 8, 4, 6, 9]
+                }, {
+                    name: 'АСФ',
+                    data: [4, 3, 3, 7, 8, 7]
+                }, {
+                    name: 'ГГФ',
+                    data: [6, 5, 7, 6, 4, 8]
+                }, {
+                    name: 'МФ',
+                    data: [3, 6, 5, 3, 2, 2]
+                }, {
+                    name: 'ФПП',
+                    data: [7, 7, 4, 8, 5, 4]
+                }, {
+                    name: 'ЭФ',
+                    data: [9, 4, 6, 5, 7, 5]
+
+                }]
+            });
+        };
+        function graph_uspev() {
+            $('#graphic_uspev').highcharts({
+                title: {
+                    text: 'Успеваемость',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: 'СКГМИ',
+                    x: -20
+                },
+                xAxis: {
+                    categories: ['2010', '2011', '2012', '2013', '2014', '2015']
+                },
+                yAxis: {
+                    max: 9,
+                    min: 1,
+                    reversed: true,
+                    title: {
+                        text: 'Рейтинг'
+                    },
+                    tickInterval: 1,
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    valueSuffix: '',
+                    crosshairs: false
+                },
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    borderWidth: 0
+                },
+                series: [{
+                    name: 'ФИТ',
+                    data: [5, 9, 5, 3, 4, 5]
+                }, {
+                    name: 'ЭМФ',
+                    data: [9, 7, 8, 8, 8, 7]
+                }, {
+                    name: 'ФЭТ',
+                    data: [3, 5, 4, 4, 7, 8]
+                }, {
+                    name: 'ЮФ',
+                    data: [2, 3, 3, 6, 3, 6]
+                }, {
+                    name: 'АСФ',
+                    data: [7, 4, 7, 5, 5, 4]
+                }, {
+                    name: 'ГГФ',
+                    data: [6, 6, 6, 7, 6, 3]
+                }, {
+                    name: 'МФ',
+                    data: [8, 8, 9, 9, 9, 9]
+                }, {
+                    name: 'ФПП',
+                    data: [4, 2, 2, 1, 1, 1]
+                }, {
+                    name: 'ЭФ',
+                    data: [1, 1, 1, 2, 2, 2]
+
+                }]
+            });
+        };
+        function graph_attend() {
+            $('#graphic_attend').highcharts({
+                title: {
+                    text: 'Посещаемость',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: 'СКГМИ',
+                    x: -20
+                },
+                xAxis: {
+                    categories: ['2010', '2011', '2012', '2013', '2014', '2015']
+                },
+                yAxis: {
+                    max: 9,
+                    min: 1,
+                    reversed: true,
+                    title: {
+                        text: 'Рейтинг'
+                    },
+                    tickInterval: 1,
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    valueSuffix: '',
+                    crosshairs: false
+                },
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    borderWidth: 0
+                },
+                series: [{
+                    name: 'ФИТ',
+                    data: [3, 1, 7, 1, 2, 1]
+                }, {
+                    name: 'ЭМФ',
+                    data: [7, 9, 9, 9, 6, 5]
+                }, {
+                    name: 'ФЭТ',
+                    data: [4, 4, 3, 3, 3, 6]
+                }, {
+                    name: 'ЮФ',
+                    data: [1, 8, 8, 6, 9, 8]
+                }, {
+                    name: 'АСФ',
+                    data: [9, 6, 7, 8, 8, 7]
+                }, {
+                    name: 'ГГФ',
+                    data: [8, 7, 6, 7, 7, 9]
+                }, {
+                    name: 'МФ',
+                    data: [6, 3, 4, 5, 1, 4]
+                }, {
+                    name: 'ФПП',
+                    data: [2, 5, 5, 4, 4, 3]
+                }, {
+                    name: 'ЭФ',
+                    data: [5, 2, 2, 2, 5, 2]
+
+                }]
+            });
+        };
+        function graph_lowMark() {
+            $('#graphic_lowMark').highcharts({
+                title: {
+                    text: 'Процент сессионных оценок с низкой мотивацией',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: 'СКГМИ',
+                    x: -20
+                },
+                xAxis: {
+                    categories: ['2010', '2011', '2012', '2013', '2014', '2015']
+                },
+                yAxis: {
+                    max: 9,
+                    min: 1,
+                    reversed: true,
+                    title: {
+                        text: 'Рейтинг'
+                    },
+                    tickInterval: 1,
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    valueSuffix: '',
+                    crosshairs: false
+                },
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    borderWidth: 0
+                },
+                series: [{
+                    name: 'ФИТ',
+                    data: [1, 2, 2, 3, 4, 2]
+                }, {
+                    name: 'ЭМФ',
+                    data: [4, 3, 4, 4, 2, 7]
+                }, {
+                    name: 'ФЭТ',
+                    data: [3, 4, 3, 7, 3, 5]
+                }, {
+                    name: 'ЮФ',
+                    data: [6, 9, 6, 5, 9, 9]
+                }, {
+                    name: 'АСФ',
+                    data: [9, 6, 8, 9, 5, 4]
+                }, {
+                    name: 'ГГФ',
+                    data: [8, 7, 7, 8, 8, 8]
+                }, {
+                    name: 'МФ',
+                    data: [2, 1, 1, 1, 1, 1]
+                }, {
+                    name: 'ФПП',
+                    data: [5, 8, 5, 2, 6, 6]
+                }, {
+                    name: 'ЭФ',
+                    data: [7, 5, 9, 6, 7, 3]
+
+                }]
+            });
+        };
+        function graph_badRait() {
+            $('#graphic_badRait').highcharts({
+                title: {
+                    text: 'Cеместровая активность преподавателей',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: 'СКГМИ',
+                    x: -20
+                },
+                xAxis: {
+                    categories: ['2010', '2011', '2012', '2013', '2014', '2015']
+                },
+                yAxis: {
+                    max: 9,
+                    min: 1,
+                    reversed: true,
+                    title: {
+                        text: 'Рейтинг'
+                    },
+                    tickInterval: 1,
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    valueSuffix: '',
+                    crosshairs: false
+                },
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    borderWidth: 0
+                },
+                series: [{
+                    name: 'ФИТ',
+                    data: [2, 3, 1, 2, 8, 7]
+                }, {
+                    name: 'ЭМФ',
+                    data: [5, 4, 5, 5, 2, 6]
+                }, {
+                    name: 'ФЭТ',
+                    data: [1, 2, 3, 7, 1, 3]
+                }, {
+                    name: 'ЮФ',
+                    data: [4, 9, 4, 4, 3, 2]
+                }, {
+                    name: 'АСФ',
+                    data: [9, 7, 8, 9, 9, 9]
+                }, {
+                    name: 'ГГФ',
+                    data: [8, 8, 7, 8, 5, 5]
+                }, {
+                    name: 'МФ',
+                    data: [3, 1, 2, 1, 4, 1]
+                }, {
+                    name: 'ФПП',
+                    data: [6, 6, 6, 3, 6, 8]
+                }, {
+                    name: 'ЭФ',
+                    data: [7, 5, 9, 6, 7, 4]
+
+                }]
+            });
+        };
+        function graph_asp() {
+            $('#graphic_asp').highcharts({
+                title: {
+                    text: 'Результаты обучения аспирантов',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: 'СКГМИ',
+                    x: -20
+                },
+                xAxis: {
+                    categories: ['2010', '2011', '2012', '2013', '2014', '2015']
+                },
+                yAxis: {
+                    max: 9,
+                    min: 1,
+                    reversed: true,
+                    title: {
+                        text: 'Рейтинг'
+                    },
+                    tickInterval: 1,
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    valueSuffix: '',
+                    crosshairs: false
+                },
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    borderWidth: 0
+                },
+                series: [{
+                    name: 'ФИТ',
+                    data: [2, 2, 5, 6, 9, 2]
+                }, {
+                    name: 'ЭМФ',
+                    data: [7, 5, 4, 7, 8, 4]
+                }, {
+                    name: 'ФЭТ',
+                    data: [6, 7, 6, 5, 6, 3]
+                }, {
+                    name: 'ЮФ',
+                    data: [5, 8, 9, 3, 7, 9]
+                }, {
+                    name: 'АСФ',
+                    data: [4, 4, 3, 8, 2, 7]
+                }, {
+                    name: 'ГГФ',
+                    data: [3, 1, 2, 2, 3, 1]
+                }, {
+                    name: 'МФ',
+                    data: [8, 6, 8, 4, 4, 8]
+                }, {
+                    name: 'ФПП',
+                    data: [9, 9, 7, 9, 5, 5]
+                }, {
+                    name: 'ЭФ',
+                    data: [1, 3, 1, 1, 1, 6]
+
+                }]
+            });
+        };
+        function graph_fin() {
+            $('#graphic_fin').highcharts({
+                title: {
+                    text: 'Грантовая активность',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: 'СКГМИ',
+                    x: -20
+                },
+                xAxis: {
+                    categories: ['2010', '2011', '2012', '2013', '2014', '2015']
+                },
+                yAxis: {
+                    max: 9,
+                    min: 1,
+                    reversed: true,
+                    title: {
+                        text: 'Рейтинг'
+                    },
+                    tickInterval: 1,
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    valueSuffix: '',
+                    crosshairs: false
+                },
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    borderWidth: 0
+                },
+                series: [{
+                    name: 'ФИТ',
+                    data: [1, 3, 3, 2, 5, 4]
+                }, {
+                    name: 'ЭМФ',
+                    data: [6, 7, 6, 5, 9, 7]
+                }, {
+                    name: 'ФЭТ',
+                    data: [4, 1, 1, 3, 2, 1]
+                }, {
+                    name: 'ЮФ',
+                    data: [9, 9, 9, 9, 8, 9]
+                }, {
+                    name: 'АСФ',
+                    data: [2, 2, 2, 1, 4, 3]
+                }, {
+                    name: 'ГГФ',
+                    data: [3, 4, 5, 4, 3, 8]
+                }, {
+                    name: 'МФ',
+                    data: [5, 5, 4, 7, 1, 2]
+                }, {
+                    name: 'ФПП',
+                    data: [8, 8, 7, 8, 7, 5]
+                }, {
+                    name: 'ЭФ',
+                    data: [7, 6, 8, 6, 6, 6]
+
+                }]
+            });
+        };
+        function graph_zp() {
+            $('#graphic_zp').highcharts({
+                title: {
+                    text: 'Cредняя заработная плата ППС кафедр факультетов',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: 'СКГМИ',
+                    x: -20
+                },
+                xAxis: {
+                    categories: ['2012', '2013', '2014', '2015']
+                },
+                yAxis: {
+                    max: 9,
+                    min: 1,
+                    reversed: true,
+                    title: {
+                        text: 'Рейтинг'
+                    },
+                    tickInterval: 1,
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    valueSuffix: '',
+                    crosshairs: false
+                },
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    borderWidth: 0
+                },
+                series: [{
+                    name: 'ФИТ',
+                    data: [4, 3, 4, 5]
+                }, {
+                    name: 'ЭМФ',
+                    data: [6, 8, 7, 3]
+                }, {
+                    name: 'ФЭТ',
+                    data: [9, 7, 8, 1]
+                }, {
+                    name: 'ЮФ',
+                    data: [1, 1, 2, 8]
+                }, {
+                    name: 'АСФ',
+                    data: [5, 4, 1, 9]
+                }, {
+                    name: 'ГГФ',
+                    data: [2, 2, 5, 7]
+                }, {
+                    name: 'МФ',
+                    data: [8, 9, 9, 2]
+                }, {
+                    name: 'ФПП',
+                    data: [7, 5, 6, 4]
+                }, {
+                    name: 'ЭФ',
+                    data: [3, 6, 3, 6]
+
+                }]
+            });
+        };
+
+        function yearClick() {
+            var obj = document.getElementById('selYear');
+            var select_list = document.getElementById('year_select');
+            var selected_id = select_list.selectedIndex;
+            var id_value = 'y' + select_list.options[selected_id].text;
+            switch (selected_id) {
+                case 0: //2015
+                    obj.innerHTML = 'Интегральный рейтинг деканатов по данным 2015 года:';
+
+                    document.getElementById('ygraph').style.backgroundColor = "rgba(0, 0, 0, 0)";
+                    document.getElementById('progn').style.backgroundColor = "rgba(0, 0, 0, 0)";
+
+                    document.getElementById('t2015').style.display = "block";
+                    document.getElementById('t2014').style.display = "none";
+                    document.getElementById('t2013').style.display = "none";
+                    document.getElementById('t2012').style.display = "none";
+                    document.getElementById('t2011').style.display = "none";
+                    document.getElementById('t2010').style.display = "none";
+                    document.getElementById('progn').style.display = "none";
+                    document.getElementById('container').style.display = 'none';
+                    break;
+                case 1: //2014
+                    obj.innerHTML = 'Интегральный рейтинг деканатов по данным 2014 года:';
+
+                    document.getElementById('ygraph').style.backgroundColor = "rgba(0, 0, 0, 0)";
+                    document.getElementById('progn').style.backgroundColor = "rgba(0, 0, 0, 0)";
+
+                    document.getElementById('t2014').style.display = "block";
+                    document.getElementById('t2015').style.display = "none";
+                    document.getElementById('t2013').style.display = "none";
+                    document.getElementById('t2012').style.display = "none";
+                    document.getElementById('t2011').style.display = "none";
+                    document.getElementById('t2010').style.display = "none";
+                    document.getElementById('progn').style.display = "none";
+                    document.getElementById('container').style.display = 'none';
+                    break;
+                case 2: // 2013
+
+                    obj.innerHTML = 'Интегральный рейтинг деканатов по данным 2013 года:';
+
+                    document.getElementById('ygraph').style.backgroundColor = "rgba(0, 0, 0, 0)";
+                    document.getElementById('yprogn').style.backgroundColor = "rgba(0, 0, 0, 0)";
+
+                    document.getElementById('t2013').style.display = "block";
+                    document.getElementById('t2015').style.display = "none";
+                    document.getElementById('t2014').style.display = "none";
+                    document.getElementById('t2012').style.display = "none";
+                    document.getElementById('t2011').style.display = "none";
+                    document.getElementById('t2010').style.display = "none";
+                    document.getElementById('progn').style.display = "none";
+                    document.getElementById('container').style.display = 'none';
+
+                    break;
+                case 3: //2012
+                    obj.innerHTML = 'Интегральный рейтинг деканатов по данным 2012 года:';
+
+                    document.getElementById('ygraph').style.backgroundColor = "rgba(0, 0, 0, 0)";
+                    document.getElementById('progn').style.backgroundColor = "rgba(0, 0, 0, 0)";
+
+                    document.getElementById('t2012').style.display = "block";
+                    document.getElementById('t2015').style.display = "none";
+                    document.getElementById('t2014').style.display = "none";
+                    document.getElementById('t2013').style.display = "none";
+                    document.getElementById('t2011').style.display = "none";
+                    document.getElementById('t2010').style.display = "none";
+                    document.getElementById('progn').style.display = "none";
+                    document.getElementById('container').style.display = 'none';
+                    break;
+                case 4: //2011
+                    obj.innerHTML = 'Интегральный рейтинг деканатов по данным 2011 года:';
+
+                    document.getElementById('ygraph').style.backgroundColor = "rgba(0, 0, 0, 0)";
+                    document.getElementById('yprogn').style.backgroundColor = "rgba(0, 0, 0, 0)";
+
+                    document.getElementById('t2011').style.display = "block";
+                    document.getElementById('t2015').style.display = "none";
+                    document.getElementById('t2014').style.display = "none";
+                    document.getElementById('t2013').style.display = "none";
+                    document.getElementById('t2012').style.display = "none";
+                    document.getElementById('t2010').style.display = "none";
+                    document.getElementById('progn').style.display = "none";
+                    document.getElementById('container').style.display = 'none';
+                    break;
+                case 5: //2010
+                    obj.innerHTML = 'Интегральный рейтинг деканатов по данным 2010 года:';
+
+                    document.getElementById('ygraph').style.backgroundColor = "rgba(0, 0, 0, 0)";
+                    document.getElementById('yprogn').style.backgroundColor = "rgba(0, 0, 0, 0)";
+
+                    document.getElementById('t2010').style.display = "block";
+                    document.getElementById('t2015').style.display = "none";
+                    document.getElementById('t2014').style.display = "none";
+                    document.getElementById('t2013').style.display = "none";
+                    document.getElementById('t2012').style.display = "none";
+                    document.getElementById('t2011').style.display = "none";
+                    document.getElementById('progn').style.display = "none";
+                    document.getElementById('container').style.display = 'none';
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        function otherClick(year) {
+            var obj = document.getElementById('selYear');
+            switch (year) {
+                case 'ygraph':
+                    obj.innerHTML = 'Графическое представление рейтинга факультетов:';
+
+                    if (-[1, ]) {
+                        graph();
+                        /*graph_uspev();
+                        graph_attend();
+                        graph_lowMark();
+                        graph_badRait();
+                        graph_asp();
+                        graph_fin();
+                        graph_zp();*/
+                    }
+                    else {
+                        document.getElementById('container').style.display = 'none';
+                        document.getElementById('iegraph').style.display = 'block';
+                    }
+
+                    document.getElementById('ygraph').style.backgroundColor = "#7884d0";
+                    document.getElementById('yprogn').style.backgroundColor = "rgba(0, 0, 0, 0)";
+
+                    document.getElementById('progn').style.display = "none";
+                    document.getElementById('t2015').style.display = "none";
+                    document.getElementById('t2014').style.display = "none";
+                    document.getElementById('t2013').style.display = "none";
+                    document.getElementById('t2012').style.display = "none";
+                    document.getElementById('t2011').style.display = "none";
+                    document.getElementById('t2010').style.display = "none";
+                    document.getElementById('container').style.display = 'block';
+
+                    break;
+                case 'yprogn':
+                    obj.innerHTML = 'Интегральный прогноз на 2016 год:';
+
+                    document.getElementById('ygraph').style.backgroundColor = "rgba(0, 0, 0, 0)";
+                    document.getElementById('yprogn').style.backgroundColor = "#7884d0";
+
+                    document.getElementById('progn').style.display = "block";
+                    document.getElementById('t2015').style.display = "none";
+                    document.getElementById('t2014').style.display = "none";
+                    document.getElementById('t2013').style.display = "none";
+                    document.getElementById('t2012').style.display = "none";
+                    document.getElementById('t2011').style.display = "none";
+                    document.getElementById('t2010').style.display = "none";
+                    document.getElementById('container').style.display = "none";
+
+                    break;
+                    /*
+             */
+                default:
+                    document.getElementById('t2014').style.display = "none";
+                    break;
+            }
+        }
+        function onload_year() {
+        }
+        window.onload = function () {
+            document.getElementById('y2014').style.backgroundColor = "#7884d0";
+        }
+    </script>
+</head>
+<body>
+    <!--[if lte IE 8]>
+                <table class="ie_head">
+                <tr>
+                    <td>
+                <img class="logo_img" alt="СКГМИ" src="img/Logo0000.png"/>
+                    </td>
+                    <td>
+                    <h5>ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ</h5>
+                <h1>"Северо-Кавказский горно-металлургический институт (ГТУ)"</h1>
+                <h2>Рейтинг деканатов</h2>
+                <a href="index.html" class="tgraph" style="text-decoration:underline">Табличное представление данных</a>
+                <a href="graph.html" class="tgraph">Графическое представление данных</a>
+    <a href="progn.html" class="tgraph">Прогноз</a>
+                    </td>
+                </tr>
+                </table>
+
+      <![endif]-->
+    <div class="header">
+
+        <div class="logo_back">
+            <a class="logo_a" href="http://www.skgmi-gtu.ru/">
+                <img class="logo_img" alt="Вернуться на сайт СКГМИ" src="img/Logo0000.png" /></a>
+            <div class="backtogmi">
+                <ul>
+                    <li><a href="http://rating.skgmi-gtu.ru/">Вернуться к выбору подразделения</a></li>
+                    <li><a href="http://www.skgmi-gtu.ru/">Вернуться на сайт СКГМИ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_head">
+            <a class="backtogmi_forphone" href="http://www.skgmi-gtu.ru/">Вернуться на сайт СКГМИ (ГТУ)</a>
+            <h5>ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ</h5>
+            <h1 class="logo_skgmi">"Северо-Кавказский горно-металлургический институт (ГТУ)"</h1>
+
+            <h2 class="logo_rait">Рейтинг деканатов</h2>
+            <div class="menu_row">
+                <h4>Выберите год:</h4>
+                <select id="year_select" class="year_select" onchange="yearClick()">
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                </select>
+                <ul class="menu" id="menu">
+                    <!-- <li><a id="y2014" onclick="yearClick(this.id)">2014</a></li>
+                    <li><a id="y2013" onclick="yearClick(this.id)">2013</a></li>
+                    <li><a id="y2012" onclick="yearClick(this.id)">2012</a></li>
+                    <li><a id="y2011" onclick="yearClick(this.id)">2011</a></li>
+                    <li><a id="y2010" onclick="yearClick(this.id)">2010</a></li>  -->
+                    <li><a id="ygraph" onclick="otherClick(this.id)">Графики/Критерии</a></li>
+                    <li><a id="yprogn" onclick="otherClick(this.id)">Прогноз</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--[if lte IE 8]>
+    <h2>Интегральное представление данных</h2>
+    <h3>Дробь в поле означает, что оба факультета претендуют на одно и то же место.</h3>
+            <![endif]-->
+    <table class="alltable">
+        <tr>
+            <td>
+                <h2>Интегральный рейтинг деканатов по данным 2015 года</h2>
+                <table id="Table7" class="table_rait">
+                    <tr>
+                        <th>Рейтинг</th>
+                        <th>Наименование факультета</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Факультет электронной техники</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Металлургический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Факультет информационных технологий</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Факультет пищевых производств</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Экономический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Электромеханический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Архитектурно-строительный факультет</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Горно-геологический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Юридический факультет</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>Интегральный рейтинг деканатов по данным 2014 года</h2>
+                <table id="Table1" class="table_rait">
+                    <tr>
+                        <th>Рейтинг</th>
+                        <th>Наименование факультета</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Металлургический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Факультет электронной техники</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Экономический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Горно-геологический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Факультет пищевых производств</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Архитектурно-строительный факультет</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Факультет информационных технологий</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Электромеханический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Юридический факультет</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <h2>Интегральный рейтинг деканатов по данным 2013 года</h2>
+                <table id="Table2" class="table_rait">
+                    <tr>
+                        <th>Рейтинг</th>
+                        <th>Наименование факультета</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Факультет информационных технологий</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Экономический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Факультет электронной техники</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Металлургический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Факультет пищевых производств</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Юридический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Горно-геологический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Архитектурно-строительный факультет</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Электромеханический факультет</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>Интегральный рейтинг деканатов по данным 2012 года</h2>
+                <table id="Table3" class="table_rait">
+                    <tr>
+                        <th>Рейтинг</th>
+                        <th>Наименование факультета</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Факультет электронной техники</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Факультет информационных технологий</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Архитектурно-строительный факультет</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Экономический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Факультет пищевых производств</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Металлургический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Горно-геологический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Электромеханический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Юридический факультет</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <h2>Интегральный рейтинг деканатов по данным 2011 года</h2>
+                <table id="Table4" class="table_rait">
+                    <tr>
+                        <th>Рейтинг</th>
+                        <th>Наименование факультета</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Факультет информационных технологий</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Факультет электронной техники</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Архитектурно-строительный факультет</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Экономический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Горно-геологический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Металлургический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Факультет пищевых производств</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Электромеханический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Юридический факультет</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>Интегральный рейтинг деканатов по данным 2010 года</h2>
+                <table id="Table5" class="table_rait">
+                    <tr>
+                        <th>Рейтинг</th>
+                        <th>Наименование факультета</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Факультет информационных технологий</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Факультет электронной техники</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Металлургический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Архитектурно-строительный факультет</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Юридический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Горно-геологический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Факультет пищевых производств</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Электромеханический факультет</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Экономический факультет</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <h2>Прогноз на 2015 год</h2>
+                <table id="Table6" class="table_rait">
+                    <tr>
+                        <th>Наименование факультета</th>
+                        <th>Прогнозируемое место</th>
+                    </tr>
+                    <tr>
+                        <td>Архитектурно-строительный факультет</td>
+                        <td>8 или 9</td>
+                    </tr>
+                    <tr>
+                        <td>Горно-геологический факультет</td>
+                        <td>2 или 3</td>
+                    </tr>
+                    <tr>
+                        <td>Факультет электронной техники</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Факультет информационных технологий</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>Металлургический факультет</td>
+                        <td>2 или 3</td>
+                    </tr>
+                    <tr>
+                        <td>Факультет пищевых производств</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Юридический факультет</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Электромеханический факультет</td>
+                        <td>8 или 9</td>
+                    </tr>
+                    <tr>
+                        <td>Экономический факультет</td>
+                        <td>7</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <div class="content">
+        <div id="selYear">Интегральный рейтинг деканатов по данным 2015 года</div>
+        <div class="otherbr">
+            <table id="t2015" class="table_rait">
+                <tr>
+                    <th>Рейтинг</th>
+                    <th>Наименование факультета</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Юридический факультет</td>
+                </tr>
+            </table>
+            <table id="t2014" class="table_rait">
+                <tr>
+                    <th>Рейтинг</th>
+                    <th>Наименование факультета</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+            </table>
+            <table id="t2013" class="table_rait">
+                <tr>
+                    <th>Рейтинг</th>
+                    <th>Наименование факультета</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+            </table>
+            <table id="t2012" class="table_rait">
+                <tr>
+                    <th>Рейтинг</th>
+                    <th>Наименование факультета</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+            </table>
+            <table id="t2011" class="table_rait">
+                <tr>
+                    <th>Рейтинг</th>
+                    <th>Наименование факультета</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Юридический факультет</td>
+                </tr>
+            </table>
+            <table id="t2010" class="table_rait">
+                <tr>
+                    <th>Рейтинг</th>
+                    <th>Наименование факультета</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Экономический факультет</td>
+                </tr>
+            </table>
+
+            <div id="progn" class="progn">
+                <table id="tprogn" class="table_rait">
+                    <tr>
+                        <th>Наименование факультета</th>
+                        <th>Прогнозируемое место</th>
+                    </tr>
+                    <tr>
+                        <td>Факультет электронной техники</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Металлургический факультет</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Факультет информационных технологий</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Факультет пищевых производств</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>Электромеханический факультет</td>
+                        <td>5 или 6</td>
+                    </tr>
+                    <tr>
+                        <td>Экономический факультет</td>
+                        <td>5 или 6</td>
+                    </tr>
+                    <tr>
+                        <td>Архитектурно-строительный факультет</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>Горно-геологический факультет</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>Юридический факультет</td>
+                        <td>9</td>
+                    </tr>
+                </table>
+
+                <!-- прогнозируемые критерии-->
+
+                <p id="container_p">Прогноз критериев на 2016 год:</p>
+                <table class="progn_crit_tbs">
+                    <tr>
+                        <td>
+                            <p class="crit_p">Прогноз посещаемости:</p>
+                            <table class="table_rait">
+                                <tr>
+                                    <th>Наименование факультета</th>
+                                    <th>Прогнозируемое место</th>
+                                </tr>
+                                <tr>
+                                    <td>Факультет информационных технологий</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Экономический факультет</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Факультет пищевых производств</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>Металлургический факультет</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>Электромеханический факультет</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>Факультет электронной техники</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>Архитектурно-строительный факультет</td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td>Юридический факультет</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td>Горно-геологический факультет</td>
+                                    <td>9</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <p class="crit_p">Прогноз успеваемости:</p>
+                            <table class="table_rait">
+                                <tr>
+                                    <th>Наименование факультета</th>
+                                    <th>Прогнозируемое место</th>
+                                </tr>
+                                <tr>
+                                    <td>Факультет пищевых производств</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Экономический факультет</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Горно-геологический факультет</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>Архитектурно-строительный факультет</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>Факультет информационных технологий</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>Юридический факультет</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>Электромеханический факультет</td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td>Факультет электронной техники</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td>Металлургический факультет</td>
+                                    <td>9</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="crit_p">Процент сессионных оценок с низкой мотивацией:</p>
+                            <table class="table_rait">
+                                <tr>
+                                    <th>Наименование факультета</th>
+                                    <th>Прогнозируемое место</th>
+                                </tr>
+                                <tr>
+                                    <td>Металлургический факультет</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Факультет информационных технологий</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Экономический факультет</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>Архитектурно-строительный факультет</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>Факультет электронной техники</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>Факультет пищевых производств</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>Электромеханический факультет</td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td>Горно-геологический факультет</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td>Юридический факультет</td>
+                                    <td>9</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <p class="crit_p">Семестровая активность преподавателей:</p>
+                            <table class="table_rait">
+                                <tr>
+                                    <th>Наименование факультета</th>
+                                    <th>Прогнозируемое место</th>
+                                </tr>
+                                <tr>
+                                    <td>Металлургический факультет</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Юридический факультет</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Факультет электронной техники</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>Экономический факультет</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>Горно-геологический факультет</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>Электромеханический факультет</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>Факультет информационных технологий</td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td>Факультет пищевых производств</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td>Архитектурно-строительный факультет</td>
+                                    <td>9</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="crit_p">Результаты обучения аспирантов:</p>
+                            <table class="table_rait">
+                                <tr>
+                                    <th>Наименование факультета</th>
+                                    <th>Прогнозируемое место</th>
+                                </tr>
+                                <tr>
+                                    <td>Горно-геологический факультет</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Факультет электронной техники</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Факультет пищевых производств</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>Экономический факультет</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>Факультет информационных технологий</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>Электромеханический факультет</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>Архитектурно-строительный факультет</td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td>Металлургический факультет</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td>Юридический факультет</td>
+                                    <td>9</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <p class="crit_p">Грантовая активность:</p>
+                            <table class="table_rait">
+                                <tr>
+                                    <th>Наименование факультета</th>
+                                    <th>Прогнозируемое место</th>
+                                </tr>
+                                <tr>
+                                    <td>Факультет электронной техники</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Металлургический факультет</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Архитектурно-строительный факультет</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>Факультет информационных технологий </td>
+                                    <td>4 или 5</td>
+                                </tr>
+                                <tr>
+                                    <td>Факультет пищевых производств</td>
+                                    <td>4 или 5</td>
+                                </tr>
+                                <tr>
+                                    <td>Экономический факультет</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>Электромеханический факультет</td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td>Горно-геологический факультет</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td>Юридический факультет</td>
+                                    <td>9</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="crit_p">Прогноз средней заработной платы:</p>
+                            <table class="table_rait">
+                                <tr>
+                                    <th>Наименование факультета</th>
+                                    <th>Прогнозируемое место</th>
+                                </tr>
+                                <tr>
+                                    <td>Факультет электронной техники</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Металлургический факультет</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Электромеханический факультет</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>Факультет пищевых производств</td>
+                                    <td>4 или 5</td>
+                                </tr>
+                                <tr>
+                                    <td>Экономический факультет</td>
+                                    <td>4 или 5</td>
+                                </tr>
+                                <tr>
+                                    <td>Факультет информационных технологий</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>Горно-геологический факультет</td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td>Юридический факультет</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td>Архитектурно-строительный факультет</td>
+                                    <td>9</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+
+            </div>
+            <!-- конец прогнозируемые критерии-->
+        </div>
+        <div id="container">
+            <div id="graphic"></div>
+            <p id="container_p">Графики по критериям:</p>
+            <ul>
+                <li>
+                    <!--спойлер--посещаемость-->
+                    <div class="spoil">
+                        <div class="smallfont">
+                            <input type="button" value="Посещаемость" class="input-button" onmousedown="graph_attend()" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Средняя посещаемость, в пересчете на одного студента'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Посещаемость'; }" />
+                        </div>
+                        <div class="alt2">
+                            <div style="display: none;">
+                                <div id="graphic_attend"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--конец_спойлера-->
+                </li>
+
+                <li>
+                    <!--спойлер--успеваемость-->
+                    <div class="spoil">
+                        <div class="smallfont">
+                            <input type="button" value="Успеваемость" class="input-button" onmousedown="graph_uspev()" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Средняя успеваемость, в пересчете на одного студента'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Успеваемость'; }" />
+                        </div>
+                        <div class="alt2">
+                            <div style="display: none;">
+                                <div id="graphic_uspev"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--конец_спойлера-->
+                </li>
+
+                <li>
+                    <!--спойлер--процент сессионных оценок с низкой мотивацией-->
+                    <div class="spoil">
+                        <div class="smallfont">
+                            <input type="button" value="Процент сессионных оценок с низкой мотивацией" class="input-button" onmousedown="graph_lowMark()" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Процент сессионных оценок с низкой мотивацией'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Процент сессионных оценок с низкой мотивацией'; }" />
+                        </div>
+                        <div class="alt2">
+                            <div style="display: none;">
+                                <div id="graphic_lowMark"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--конец_спойлера-->
+                </li>
+
+                <li>
+                    <!--спойлер--семестровая активность преподавателей-->
+                    <div class="spoil">
+                        <div class="smallfont">
+                            <input type="button" value="Семестровая активность преподавателей" class="input-button" onmousedown="graph_badRait()" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Семестровая активность преподавателей (процент случаев негативной динамики текущей успеваемости студентов)'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Семестровая активность преподавателей'; }" />
+                        </div>
+                        <div class="alt2">
+                            <div style="display: none;">
+                                <div id="graphic_badRait"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--конец_спойлера-->
+                </li>
+
+                <li>
+                    <!--спойлер--аспиранты-->
+                    <div class="spoil">
+                        <div class="smallfont">
+                            <input type="button" value="Результаты обучения аспирантов" class="input-button" onmousedown="graph_asp()" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Результаты обучения аспирантов'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Результаты обучения аспирантов'; }" />
+                        </div>
+                        <div class="alt2">
+                            <div style="display: none;">
+                                <div id="graphic_asp"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--конец_спойлера-->
+                </li>
+
+                <li>
+                    <!--спойлер--гранты-->
+                    <div class="spoil">
+                        <div class="smallfont">
+                            <input type="button" value="Грантовая активность" class="input-button" onmousedown="graph_fin()" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Грантовая активность'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Грантовая активность'; }" />
+                        </div>
+                        <div class="alt2">
+                            <div style="display: none;">
+                                <div id="graphic_fin"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--конец_спойлера-->
+                </li>
+
+                <li>
+                    <!--спойлер--ЗП-->
+                    <div class="spoil">
+                        <div class="smallfont">
+                            <input type="button" value="Средняя заработная плата" class="input-button" onmousedown="graph_zp()" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Средняя заработная плата ППС кафедр факультетов'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Средняя заработная плата'; }" />
+                        </div>
+                        <div class="alt2">
+                            <div style="display: none;">
+                                <div id="graphic_zp"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--конец_спойлера-->
+                </li>
+            </ul>
+        </div>
+
+        <p class="prikaz">
+            Согласно приказу № 384/ОД ректора СКГМИ(ГТУ) Ю.И. Разоренова для повышения качества учебного процесса и объективности его оценки, производится ежегодное ранжирование факультетов дневной формы обучения по следующим критериям:
+        </p>
+        <ul>
+            <li>посещаемость;</li>
+            <li>успеваемость;</li>
+            <li>процент сессионных оценок с низкой мотивацией;</li>
+            <li>семестровая активность преподавателей;</li>
+            <li>результаты обучения аспирантов;</li>
+            <li>грантовая активность;</li>
+            <li>средняя заработная плата ППС кафедр факультетов.</li>
+        </ul>
+    </div>
+    <div class="footer"></div>
+</body>
+</html>

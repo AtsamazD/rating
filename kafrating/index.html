@@ -1,0 +1,3015 @@
+﻿<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Рейтинг кафедр | СКГМИ</title>
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script>
+        function graphic_asf() {
+            $('#graphic_asf').highcharts({
+                title: {
+                    text: 'Кафедры',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: 'СКГМИ',
+                    x: -20
+                },
+                xAxis: {
+                    title: {
+                        text: 'Год',
+                        style: {
+                            fontWeight: 'bold',
+                        }
+                    },
+
+                    categories: ['2010', '2011', '2012', '2013', '2014', '2015'],
+                    labels: {
+                        style: {
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                yAxis: {
+                    labels: {
+                        style: {
+                            fontWeight: 'bold'
+                        }
+                    },
+                    max: 8,
+                    min: 1,
+                    reversed: true,
+                    title: {
+                        text: 'Рейтинг',
+                        style: {
+                            fontWeight: 'bold'
+                        },
+                    },
+                    tickInterval: 1,
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    valueSuffix: '',
+                    crosshairs: false
+                },
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    borderWidth: 0
+                },
+                series: [{
+                    name: 'АДА',
+                    data: [4, 4, 4, 5, 3, 5]
+                }, {
+                    name: 'АРХ',
+                    data: [1, 1, 2, 2, 2, 3]
+                }, {
+                    name: 'НГиЧ',
+                    data: [7, 8, 5, 4, 5, 7]
+                }, {
+                    name: 'ОБДД',
+                    data: [2, 3, 1, 1, 1, 2]
+                }, {
+                    name: 'РГиГ',
+                    data: [8, 7, 8, 8, 8, 8]
+                }, {
+                    name: 'СК',
+                    data: [5, 6, 7, 7, 6, 4]
+                }, {
+                    name: 'СМиСМ',
+                    data: [6, 5, 6, 6, 7, 6]
+                }, {
+                    name: 'СП',
+                    data: [3, 2, 3, 3, 4, 1]
+                }]
+            });
+        };
+        function graphic_ggf() {
+            $('#graphic_ggf').highcharts({
+                title: {
+                    text: 'Кафедры',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: 'СКГМИ',
+                    x: -20
+                },
+                xAxis: {
+                    categories: ['2010', '2011', '2012', '2013', '2014', '2015']
+                },
+                yAxis: {
+                    max: 5,
+                    min: 1,
+                    reversed: true,
+                    title: {
+                        text: 'Рейтинг'
+                    },
+                    tickInterval: 1,
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    valueSuffix: '',
+                    crosshairs: false
+                },
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    borderWidth: 0
+                },
+                series: [{
+                    name: 'БЖД',
+                    data: [4, 4, 4, 4, 2, 4]
+                }, {
+                    name: 'ГД',
+                    data: [1, 1, 1, 2, 1, 1]
+                }, {
+                    name: 'Математика',
+                    data: [5, 5, 5, 5, 5, 5]
+                }, {
+                    name: 'ПГ',
+                    data: [2, 3, 3, 3, 3, 3]
+                }, {
+                    name: 'ЭиТБ',
+                    data: [3, 2, 2, 1, 4, 2]
+                }]
+            });
+        };
+        function graphic_mf() {
+            $('#graphic_mf').highcharts({
+                title: {
+                    text: 'Кафедры',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: 'СКГМИ',
+                    x: -20
+                },
+                xAxis: {
+                    categories: ['2010', '2011', '2012', '2013', '2014', '2015']
+                },
+                yAxis: {
+                    max: 4,
+                    min: 1,
+                    reversed: true,
+                    title: {
+                        text: 'Рейтинг'
+                    },
+                    tickInterval: 1,
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    valueSuffix: '',
+                    crosshairs: false
+                },
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    borderWidth: 0
+                },
+                series: [{
+                    name: 'МЦМ',
+                    data: [1, 3, 3, 3, 1, 1]
+                }, {
+                    name: 'ОПИ',
+                    data: [3, 1, 2, 2, 4, 4]
+                }, {
+                    name: 'ТАМПиП',
+                    data: [4, 2, 1, 1, 2, 2]
+                }, {
+                    name: 'ТХОМ',
+                    data: [2, 4, 4, 4, 3, 3]
+                }]
+            });
+        };
+        function graphic_fit() {
+            $('#graphic_fit').highcharts({
+                title: {
+                    text: 'Кафедры',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: 'СКГМИ',
+                    x: -20
+                },
+                xAxis: {
+                    categories: ['2010', '2011', '2012', '2013', '2014', '2015']
+                },
+                yAxis: {
+                    max: 4,
+                    min: 1,
+                    reversed: true,
+                    title: {
+                        text: 'Рейтинг'
+                    },
+                    tickInterval: 1,
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    valueSuffix: '',
+                    crosshairs: false
+                },
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    borderWidth: 0
+                },
+                series: [{
+                    name: 'АОИ',
+                    data: [2, 1, 1, 1, 1, 1]
+                }, {
+                    name: 'Информатика',
+                    data: [4, 4, 4, 4, 4, 4]
+                }, {
+                    name: 'ИС',
+                    data: [1, 2, 2, 2, 2, 2]
+                }, {
+                    name: 'САПР',
+                    data: [3, 3, 3, 3, 3, 3]
+                }]
+            });
+        };
+        function graphic_fpp() {
+            $('#graphic_fpp').highcharts({
+                title: {
+                    text: 'Кафедры',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: 'СКГМИ',
+                    x: -20
+                },
+                xAxis: {
+                    categories: ['2010', '2011', '2012', '2013', '2014', '2015']
+                },
+                yAxis: {
+                    max: 3,
+                    min: 1,
+                    reversed: true,
+                    title: {
+                        text: 'Рейтинг'
+                    },
+                    tickInterval: 1,
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    valueSuffix: '',
+                    crosshairs: false
+                },
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    borderWidth: 0
+                },
+                series: [{
+                    name: 'ТБП',
+                    data: [2, 2, 2, 2, 2, 2]
+                }, {
+                    name: 'ТПОП',
+                    data: [1, 1, 1, 1, 1, 1]
+                }, {
+                    name: 'Химия',
+                    data: [3, 3, 3, 3, 3, 3]
+                }]
+            });
+        };
+        function graphic_fet() {
+            $('#graphic_fet').highcharts({
+                title: {
+                    text: 'Кафедры',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: 'СКГМИ',
+                    x: -20
+                },
+                xAxis: {
+                    categories: ['2010', '2011', '2012', '2013', '2014', '2015']
+                },
+                yAxis: {
+                    max: 3,
+                    min: 1,
+                    reversed: true,
+                    title: {
+                        text: 'Рейтинг'
+                    },
+                    tickInterval: 1,
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    valueSuffix: '',
+                    crosshairs: false
+                },
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    borderWidth: 0
+                },
+                series: [{
+                    name: 'ПЭ',
+                    data: [1, 3, 3, 2, 3, 2]
+                }, {
+                    name: 'Физика',
+                    data: [3, 2, 2, 3, 2, 3]
+                }, {
+                    name: 'ЭП',
+                    data: [2, 1, 1, 1, 1, 1]
+                }]
+            });
+        };
+        function graphic_ef() {
+            $('#graphic_ef').highcharts({
+                title: {
+                    text: 'Кафедры',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: 'СКГМИ',
+                    x: -20
+                },
+                xAxis: {
+                    categories: ['2010', '2011', '2012', '2013', '2014', '2015']
+                },
+                yAxis: {
+                    max: 7,
+                    min: 1,
+                    reversed: true,
+                    title: {
+                        text: 'Рейтинг'
+                    },
+                    tickInterval: 1,
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    valueSuffix: '',
+                    crosshairs: false
+                },
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    borderWidth: 0
+                },
+                series: [{
+                    name: 'БУА',
+                    data: [3, 5, 5, 5, 5, 4]
+                }, {
+                    name: 'История',
+                    data: [7, 4, 7, 6, 4, 6]
+                }, {
+                    name: 'НН',
+                    data: [6, 6, 4, 4, 6, 5]
+                }, {
+                    name: 'ОПиЭП',
+                    data: [4, 7, 1, 1, 1, 2]
+                }, {
+                    name: 'ФК',
+                    data: [2, 2, 3, 3, 3, 3]
+                }, {
+                    name: 'ЭТ',
+                    data: [5, 3, 6, 7, 7, 7]
+                }, {
+                    name: 'ЭУП',
+                    data: [1, 1, 2, 2, 2, 1]
+                }]
+            });
+        };
+        function graphic_emf() {
+            $('#graphic_emf').highcharts({
+                title: {
+                    text: 'Кафедры',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: 'СКГМИ',
+                    x: -20
+                },
+                xAxis: {
+                    categories: ['2010', '2011', '2012', '2013', '2014', '2015']
+                },
+                yAxis: {
+                    max: 5,
+                    min: 1,
+                    reversed: true,
+                    title: {
+                        text: 'Рейтинг'
+                    },
+                    tickInterval: 1,
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    valueSuffix: '',
+                    crosshairs: false
+                },
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    borderWidth: 0
+                },
+                series: [{
+                    name: 'ДМ',
+                    data: [5, 5, 3, 4, 3, 5]
+                }, {
+                    name: 'ТМО',
+                    data: [2, 1, 1, 2, 1, 1]
+                }, {
+                    name: 'ТЭиЭМ',
+                    data: [4, 4, 4, 3, 4, 4]
+                }, {
+                    name: 'ЭА',
+                    data: [3, 3, 5, 5, 5, 3]
+                }, {
+                    name: 'ЭПП',
+                    data: [1, 2, 2, 1, 2, 2]
+                }]
+            });
+        };
+        function graphic_uf() {
+            $('#graphic_uf').highcharts({
+                title: {
+                    text: 'Cредняя заработная плата ППС кафедр факультетов',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: 'СКГМИ',
+                    x: -20
+                },
+                xAxis: {
+                    categories: ['2010', '2011', '2012', '2013', '2014', '2015']
+                },
+                yAxis: {
+                    max: 8,
+                    min: 1,
+                    reversed: true,
+                    title: {
+                        text: 'Рейтинг'
+                    },
+                    tickInterval: 1,
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    valueSuffix: '',
+                    crosshairs: false
+                },
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    borderWidth: 0
+                },
+                series: [{
+                    name: 'ГПиП',
+                    data: [4, 2, 4, 3, 2, 3]
+                }, {
+                    name: 'ИЯ',
+                    data: [7, 6, 5, 6, 7, 7]
+                }, {
+                    name: 'КиАП',
+                    data: [1, 1, 1, 1, 1, 1]
+                }, {
+                    name: 'ПиТП',
+                    data: [5, 3, 3, 4, 4, 2]
+                }, {
+                    name: 'ТиИГиП',
+                    data: [2, 5, 2, 2, 3, 4]
+                }, {
+                    name: 'УПиП',
+                    data: [3, 7, 8, 8, 5, 5]
+                }, {
+                    name: 'ФВиС',
+                    data: [8, 8, 7, 7, 8, 8]
+                }, {
+                    name: 'ФиН',
+                    data: [6, 4, 6, 5, 6, 6]
+                }]
+            });
+        };
+
+        function info_graphic(dep_name, arrayOfVUZ, arrayOfFak) {
+            $('#info_graphic').highcharts({
+                title: {
+                    text: 'Статистика',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: fak,
+                    x: -20
+                },
+                xAxis: {
+                    title: {
+                        text: 'Год',
+                        style: {
+                            fontWeight: 'bold',
+                        }
+                    },
+
+                    categories: ['2010', '2011', '2012', '2013', '2014', '2015'],
+                    labels: {
+                        style: {
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                yAxis: {
+                    labels: {
+                        style: {
+                            fontWeight: 'bold'
+                        }
+                    },
+                    max: Math.max.apply(null, arrayOfVUZ)+1,
+                    min: 1,
+                    reversed: true,
+                    title: {
+                        text: 'Место',
+                        style: {
+                            fontWeight: 'bold'
+                        },
+                    },
+                    tickInterval: 1,
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    valueSuffix: '',
+                    crosshairs: false
+                },
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    borderWidth: 0
+                },
+                series: [{
+                    name: dep_name + '(по ВУЗу)',
+                    data: [Number(arrayOfVUZ[0]), Number(arrayOfVUZ[1]), Number(arrayOfVUZ[2]), Number(arrayOfVUZ[3]), Number(arrayOfVUZ[4]), Number(arrayOfVUZ[5])]
+                },
+                {
+                    name: dep_name + '(по факультету из ' + dep_count_in_fak + ' кафедр)',
+                    data: [Number(arrayOfFak[0]), Number(arrayOfFak[1]), Number(arrayOfFak[2]), Number(arrayOfFak[3]), Number(arrayOfFak[4]), Number(arrayOfFak[5])]
+                }]
+            });
+        }
+
+        function selectYear() {
+            var select_year = document.getElementById('select_year');
+            var year = select_year.options[select_year.selectedIndex].text;
+            var obj = document.getElementById('selYear');
+            deleteRow('table_rait');
+
+            cells_color();
+            switch (year) {
+                case '2015':
+                    obj.innerHTML = 'Общий интегральный рейтинг кафедр по данным 2015 года';
+
+                    document.getElementById('t2015').style.display = "block";
+                    document.getElementById('t2014').style.display = "none";
+                    document.getElementById('t2013').style.display = "none";
+                    document.getElementById('t2012').style.display = "none";
+                    document.getElementById('t2011').style.display = "none";
+                    document.getElementById('t2010').style.display = "none";
+                    break;
+                case '2014':
+                    obj.innerHTML = 'Общий интегральный рейтинг кафедр по данным 2014 года';
+
+                    document.getElementById('t2014').style.display = "block";
+                    document.getElementById('t2015').style.display = "none";
+                    document.getElementById('t2013').style.display = "none";
+                    document.getElementById('t2012').style.display = "none";
+                    document.getElementById('t2011').style.display = "none";
+                    document.getElementById('t2010').style.display = "none";
+                    break;
+                case '2013':
+                    obj.innerHTML = 'Общий интегральный рейтинг кафедр по данным 2013 года';
+
+                    document.getElementById('t2013').style.display = "block";
+                    document.getElementById('t2014').style.display = "none";
+                    document.getElementById('t2015').style.display = "none";
+                    document.getElementById('t2012').style.display = "none";
+                    document.getElementById('t2011').style.display = "none";
+                    document.getElementById('t2010').style.display = "none";
+                    break;
+                case '2012':
+                    obj.innerHTML = 'Общий интегральный рейтинг кафедр по данным 2012 года';
+
+                    document.getElementById('t2012').style.display = "block";
+                    document.getElementById('t2014').style.display = "none";
+                    document.getElementById('t2013').style.display = "none";
+                    document.getElementById('t2015').style.display = "none";
+                    document.getElementById('t2011').style.display = "none";
+                    document.getElementById('t2010').style.display = "none";
+                    break;
+                case '2011':
+                    obj.innerHTML = 'Общий интегральный рейтинг кафедр по данным 2011 года';
+
+                    document.getElementById('t2011').style.display = "block";
+                    document.getElementById('t2014').style.display = "none";
+                    document.getElementById('t2013').style.display = "none";
+                    document.getElementById('t2012').style.display = "none";
+                    document.getElementById('t2015').style.display = "none";
+                    document.getElementById('t2010').style.display = "none";
+                    break;
+                case '2010':
+                    obj.innerHTML = 'Общий интегральный рейтинг кафедр по данным 2010 года';
+
+                    document.getElementById('t2010').style.display = "block";
+                    document.getElementById('t2014').style.display = "none";
+                    document.getElementById('t2013').style.display = "none";
+                    document.getElementById('t2012').style.display = "none";
+                    document.getElementById('t2011').style.display = "none";
+                    document.getElementById('t2015').style.display = "none";
+                    break;
+                default:
+
+                    break;
+            }
+        }
+
+        function yearClick(year) {
+            var obj = document.getElementById('selYear');
+            switch (year) {
+                case 'ratings':
+                    document.getElementById("ratings").style.backgroundColor = "#7884D0";
+                    document.getElementById('ygraph').style.backgroundColor = "rgba(0, 0, 0, 0)";
+                    document.getElementById('yprogn').style.backgroundColor = "rgba(0, 0, 0, 0)";
+                    document.getElementById('stat').style.backgroundColor = "rgba(0, 0, 0, 0)";
+
+                    document.getElementById('ratingOnFak').style.display = "block";
+                    document.getElementById('statistic').style.display = "none";
+                    document.getElementById('progn').style.display = "none";
+                    document.getElementById('container_for_graphics').style.display = 'none';
+
+                    break;
+                case 'ygraph':
+                    graphic_asf();
+                    graphic_ggf();
+                    graphic_ef();
+                    graphic_emf();
+                    graphic_fpp();
+                    graphic_fit();
+                    graphic_fet();
+                    graphic_mf();
+                    graphic_uf();
+
+                    document.getElementById("ratings").style.backgroundColor = "rgba(0, 0, 0, 0)";
+                    document.getElementById('stat').style.backgroundColor = "rgba(0, 0, 0, 0)";
+                    document.getElementById('ygraph').style.backgroundColor = "#7884D0";
+                    document.getElementById('yprogn').style.backgroundColor = "rgba(0, 0, 0, 0)";
+
+                    document.getElementById('ratingOnFak').style.display = "none";
+                    document.getElementById('container_for_graphics').style.display = 'block';
+                    document.getElementById('progn').style.display = "none";
+                    document.getElementById('statistic').style.display = "none";
+
+                    break;
+                case 'yprogn':
+                    document.getElementById("ratings").style.backgroundColor = "rgba(0, 0, 0, 0)";
+                    document.getElementById('ygraph').style.backgroundColor = "rgba(0, 0, 0, 0)";
+                    document.getElementById('stat').style.backgroundColor = "rgba(0, 0, 0, 0)";
+                    document.getElementById('yprogn').style.backgroundColor = "#7884D0";
+
+                    document.getElementById('progn').style.display = "block";
+                    document.getElementById('ratingOnFak').style.display = "none";
+                    document.getElementById('container_for_graphics').style.display = "none";
+                    document.getElementById('statistic').style.display = "none";
+
+                    break;
+                case 'stat':
+                    document.getElementById("ratings").style.backgroundColor = "rgba(0, 0, 0, 0)";
+                    document.getElementById('ygraph').style.backgroundColor = "rgba(0, 0, 0, 0)";
+                    document.getElementById('yprogn').style.backgroundColor = "rgba(0, 0, 0, 0)";
+                    document.getElementById('stat').style.backgroundColor = "#7884D0";
+
+                    document.getElementById('statistic').style.display = "block";
+                    document.getElementById('progn').style.display = "none";
+                    document.getElementById('ratingOnFak').style.display = "none";
+                    document.getElementById('container_for_graphics').style.display = "none";
+                    break;
+                default:
+
+                    break;
+            }
+        }
+
+        window.onload = function () {
+            document.getElementById('ratings').style.backgroundColor = "#7884D0";
+            cells_color();
+        }
+
+        function cells_color() {
+            var select_year = document.getElementById('select_year');
+            var year = select_year.options[select_year.selectedIndex].text;
+            var table = document.getElementById('t' + year);
+            for (var i = 0; i < table.rows.length; i++) {
+                // alert(table.rows[i].cells[2].innerHTML);
+                switch (table.rows[i].cells[2].innerHTML) {
+                    case 'Архитектурно-строительный факультет':
+                        table.rows[i].cells[2].style.backgroundColor = "#8085E9";
+                        break;
+                    case 'Горно-геологический факультет':
+                        table.rows[i].cells[2].style.backgroundColor = "#F15C80";
+                        break;
+                    case 'Факультет информационных технологий':
+                        table.rows[i].cells[2].style.backgroundColor = "#7CB5EC";
+                        break;
+                    case 'Факультет пищевых производств':
+                        table.rows[i].cells[2].style.backgroundColor = "#2B908F";
+                        break;
+                    case 'Факультет электронной техники':
+                        table.rows[i].cells[2].style.backgroundColor = "#90ED7D";
+                        break;
+                    case 'Металлургический факультет':
+                        table.rows[i].cells[2].style.backgroundColor = "#E4D354";
+                        break;
+                    case 'Электромеханический факультет':
+                        table.rows[i].cells[2].style.backgroundColor = "#434348";
+                        table.rows[i].cells[2].style.color = "#eee";
+                        break;
+                    case 'Юридический факультет':
+                        table.rows[i].cells[2].style.backgroundColor = "#F7A35C";
+                        break;
+                    case 'Экономический факультет':
+                        table.rows[i].cells[2].style.backgroundColor = "#F45B5B";
+                        break;
+                    default:
+
+                        break;
+                }//switch
+            }//for
+        }
+
+        function dep_li_remove() {
+            var dep_label = document.getElementById('dep_label');
+            var dep_list = document.getElementById('dep_list');
+            if (dep_list.childElementCount != 0) {
+                while (dep_list.childElementCount != 0)
+                    dep_list.removeChild(dep_list.children[0]);
+                dep_label.innerHTML = '';
+            }
+        }
+
+        function dep_select(li_inner) {
+            dep_li_remove();
+            var dep_list = document.getElementById('dep_list');
+            var table = document.getElementById('t2010');
+            dep_big_name.innerHTML = 'Сводка по кафедре ' + li_inner + ':';
+            search_in_years(li_inner);
+
+            var arrayOfPointInVUZ = [];
+            var arrayOfPointInFak = [];
+            for (var k = 1; k < dep_info_table.rows.length; k++) {
+                arrayOfPointInVUZ[k - 1] = dep_info_table.rows[k].cells[1].innerHTML;
+                arrayOfPointInFak[k - 1] = dep_info_table.rows[k].cells[2].innerHTML;
+            }
+            info_graphic(li_inner, arrayOfPointInVUZ, arrayOfPointInFak);
+        }
+        
+        var dep_count_in_fak;
+        var fak;
+
+        function search_in_years(dep_name) {
+            var date = new Date();
+
+            var dep_list = document.getElementById('dep_list');
+            var new_li = document.createElement('li');
+            var dep_info_table = document.getElementById('dep_info_table');
+            var graphic = document.getElementById('info_graphic');
+            dep_info_table.style.display = 'block';
+            graphic.style.display = 'block';
+
+            var row, cell_1, cell_2, cell_3;
+            var rowCount = dep_info_table.rows.length;
+            fak = null;
+            var year = date.getFullYear();
+            var year_count = year - 2010;
+            var table = '';
+            
+            var infak = [];
+
+            dep_count_in_fak = 0;
+            for (var i = 0; i < year_count; i++) {
+                table = 't201' + i;
+                table = document.getElementById(table);
+                for (var j = 1; j < table.rows.length; j++)
+                    if (table.rows[j].cells[1].innerHTML.toString() == dep_name) {
+                        if (fak == null)
+                            fak = table.rows[j].cells[2].innerHTML;
+                        rowCount = dep_info_table.rows.length;
+                        row = dep_info_table.insertRow(rowCount);
+                        cell_1 = row.insertCell(0);
+                        cell_1.innerHTML = table.id.slice(1, table.id.length);
+                        cell_2 = row.insertCell(1);
+                        cell_2.innerHTML = table.rows[j].cells[0].innerHTML;
+                        break;
+                    }
+                var infakTemp = [];
+                var index = 0;
+                for (var d = 1; d < table.rows.length; d++)
+                    if (table.rows[d].cells[2].innerHTML.toString() == fak) {
+                        infakTemp[index] = table.rows[d].cells[1].innerHTML;
+                        index++;
+                    }
+                if (dep_count_in_fak == 0)
+                    dep_count_in_fak = infakTemp.length;
+                for (var b = 0; b < infakTemp.length; b++)
+                    if (infakTemp[b] == dep_name) {
+                        infak[i] = b + 1;
+                        break;
+                    }
+            }
+            var tempRow;
+            for (var w = 1; w < dep_info_table.rows.length; w++) {
+                tempRow = dep_info_table.rows[w];
+                cell_3 = tempRow.insertCell(2);
+                cell_3.innerHTML = infak[w - 1];
+            }
+        }
+
+        function all_dep_load() {
+            dep_li_remove();
+            if (dep_info_table.rows.length > 1)
+                deleteRow('dep_info_table');
+            dep_big_name.innerHTML = '';
+
+            var arrayOfDep = [];
+
+            var table = document.getElementById('t2010');
+            var dep_list = document.getElementById('dep_list');
+            var new_li = document.createElement('li');
+            for (var i = 1; i < table.rows.length; i++) {
+                arrayOfDep[i - 1] = table.rows[i].cells[1].innerHTML;
+            }
+            arrayOfDep.sort();
+            for (var v = 0; v < arrayOfDep.length; v++)
+            {
+                new_li = document.createElement('li');
+                new_li.innerHTML = arrayOfDep[v];
+                new_li.setAttribute('onclick', 'dep_select(this.innerHTML)');
+                dep_list.appendChild(new_li);//, dep_list.lastChild);
+            }
+            dep_info_table.style.display = 'none';
+            var graphic = document.getElementById('info_graphic');
+            graphic.style.display = 'none';
+        }
+
+        function live_search() {
+            var dep_table = document.getElementById('dep_info_table');
+            if (dep_table.rows.length > 1)
+                deleteRow('dep_info_table');
+            var dep_list = document.getElementById('dep_list');
+            var dep_edit = document.getElementById('dep_name_edit').value.toString();
+            var dep_label = document.getElementById('dep_label');
+            var new_li = document.createElement('li');
+            var table = document.getElementById('t2010');
+            var graphic = document.getElementById('info_graphic');
+
+            var dep_info_table = document.getElementById('dep_info_table');
+            if (dep_info_table.style.display == 'block') {
+                dep_info_table.style.display = 'none';
+                graphic.style.display = 'none';
+            }
+            dep_big_name.innerHTML = '';
+
+            dep_li_remove();
+
+            if (dep_edit != '') {
+                for (var i = 1; i < table.rows.length; i++) {
+                    if ((table.rows[i].cells[2].innerHTML.indexOf(dep_edit) != -1) || (table.rows[i].cells[1].innerHTML.indexOf(dep_edit) != -1)) {
+                        new_li = document.createElement('li');
+                        new_li.innerHTML = table.rows[i].cells[1].innerHTML;
+                        new_li.setAttribute('onclick', 'dep_select(this.innerHTML)');
+                        dep_list.insertBefore(new_li, dep_list.lastChild);
+                    }
+                }
+            }
+            dep_label.innerHTML = 'Найдено ' + dep_list.childElementCount + ' совпадений';
+        }
+
+
+        function fillsmall(tableID) {
+            deleteRow(tableID);
+
+            //Выбор факультета
+            var select_list = document.getElementById('select_fak');
+            var selected_id = select_list.selectedIndex;
+            var fak = select_list.options[selected_id].text;
+
+            //Выбор года
+            var select_year = document.getElementById('select_year');
+            var selected_year_id = select_year.selectedIndex;
+            var year = select_year.options[selected_year_id].text;
+            var bigtable = document.getElementById('t' + year);
+            var raittable = document.getElementById(tableID);
+            var rowCount = raittable.rows.length;
+            var row, cell_1, cell_2, index, x;
+            index = 1;
+            for (var i = 1; i < bigtable.rows.length; i++) {
+                x = 0;
+                if (bigtable.rows[i].cells[2].innerHTML.indexOf(fak) != -1) {
+                    x++;
+                    rowCount = raittable.rows.length;
+                    row = raittable.insertRow(rowCount);
+                    cell_1 = row.insertCell(0);
+                    cell_1.innerHTML = index;
+                    cell_2 = row.insertCell(1);
+                    cell_2.innerHTML = bigtable.rows[i].cells[1].innerHTML;
+                    index++;
+                }
+            }
+        }
+
+        window.addEventListener('click', function (e) {
+            var element_txt = document.elementFromPoint(e.clientX, e.clientY).innerHTML;
+            var table = document.getElementById('t2014');
+            switch (element_txt) {
+                case 'Архитектурно-строительный факультет':
+                    var count;
+                    var temp = element_txt + "\n\nМесто    Кафедра\n";
+                    count = 0;
+                    for (var i = 0; i < table.rows.length; i++) {
+                        if (table.rows[i].cells[2].innerHTML == element_txt) {
+                            temp = temp + "\n" + /*table.rows[i].cells[2].innerHTML + "  " +*/ table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
+                        }
+                    }
+                    alert(temp);
+                    break;
+                case 'Горно-геологический факультет':
+                    var count;
+                    var temp = element_txt + "\n\nМесто    Кафедра\n";
+                    count = 0;
+                    for (var i = 0; i < table.rows.length; i++) {
+                        if (table.rows[i].cells[2].innerHTML == element_txt) {
+                            temp = temp + "\n" + /*table.rows[i].cells[2].innerHTML + "  " +*/ table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
+                        }
+                    }
+                    alert(temp);
+                    break;
+                case 'Факультет информационных технологий':
+                    var count;
+                    var temp = element_txt + "\n\nМесто    Кафедра\n";
+                    count = 0;
+                    for (var i = 0; i < table.rows.length; i++) {
+                        if (table.rows[i].cells[2].innerHTML == element_txt) {
+                            temp = temp + "\n" + /*table.rows[i].cells[2].innerHTML + "  " +*/ table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
+                        }
+                    }
+                    alert(temp);
+                    break;
+                case 'Факультет пищевых производств':
+                    var count;
+                    var temp = element_txt + "\n\nМесто    Кафедра\n";
+                    count = 0;
+                    for (var i = 0; i < table.rows.length; i++) {
+                        if (table.rows[i].cells[2].innerHTML == element_txt) {
+                            temp = temp + "\n" + /*table.rows[i].cells[2].innerHTML + "  " +*/ table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
+                        }
+                    }
+                    alert(temp);
+                    break;
+                case 'Факультет электронной техники':
+                    var count;
+                    var temp = element_txt + "\n\nМесто    Кафедра\n";
+                    count = 0;
+                    for (var i = 0; i < table.rows.length; i++) {
+                        if (table.rows[i].cells[2].innerHTML == element_txt) {
+                            temp = temp + "\n" + /*table.rows[i].cells[2].innerHTML + "  " +*/ table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
+                        }
+                    }
+                    alert(temp);
+                    break;
+                case 'Металлургический факультет':
+                    var count;
+                    var temp = element_txt + "\n\nМесто    Кафедра\n";
+                    count = 0;
+                    for (var i = 0; i < table.rows.length; i++) {
+                        if (table.rows[i].cells[2].innerHTML == element_txt) {
+                            temp = temp + "\n" + /*table.rows[i].cells[2].innerHTML + "  " +*/ table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
+                        }
+                    }
+                    alert(temp);
+                    break;
+                case 'Электромеханический факультет':
+                    var count;
+                    var temp = element_txt + "\n\nМесто    Кафедра\n";
+                    count = 0;
+                    for (var i = 0; i < table.rows.length; i++) {
+                        if (table.rows[i].cells[2].innerHTML == element_txt) {
+                            temp = temp + "\n" + /*table.rows[i].cells[2].innerHTML + "  " +*/ table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
+                        }
+                    }
+                    alert(temp);
+                    break;
+                case 'Юридический факультет':
+                    var count;
+                    var temp = element_txt + "\n\nМесто    Кафедра\n";
+                    count = 0;
+                    for (var i = 0; i < table.rows.length; i++) {
+                        if (table.rows[i].cells[2].innerHTML == element_txt) {
+                            temp = temp + "\n" + /*table.rows[i].cells[2].innerHTML + "  " +*/ table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
+                        }
+                    }
+                    alert(temp);
+                    break;
+                case 'Экономический факультет':
+                    var count;
+                    var temp = element_txt + "\n\nМесто    Кафедра\n";
+                    count = 0;
+                    for (var i = 0; i < table.rows.length; i++) {
+                        if (table.rows[i].cells[2].innerHTML == element_txt) {
+                            temp = temp + "\n" + /*table.rows[i].cells[2].innerHTML + "  " +*/ table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
+                        }
+                    }
+                    alert(temp);
+                    break;
+                default:
+
+                    break;
+            }
+        }, false);
+
+        function deleteRow(tableID) {
+            try {
+                var table = document.getElementById(tableID);
+                var rowCount = table.rows.length;
+
+                for (var i = 1; i < rowCount; i++) {
+                    var row = table.rows[i];
+                    table.deleteRow(i);
+                    rowCount--;
+                    i--;
+                }
+            }
+            catch (e) {
+                alert(e);
+            }
+        }
+
+        function infunc(tableID) {
+            deleteRow(tableID);
+            fillsmall(tableID);
+        }
+
+        function height() {
+            var back_ul = document.getElementById('backtogmi_forphone_ul');
+            back_ul.style.height = "auto";
+            back_ul.style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="beta_smyle">
+        ;)
+    </div>
+    <div class="beta">
+        betaTest
+    </div>
+    <div class="header">
+
+        <div class="logo_back">
+            <a class="logo_a" href="http://www.skgmi-gtu.ru/">
+                <img class="logo_img" alt="Вернуться на сайт СКГМИ" src="img/Logo0000.png" />
+            </a>
+            <div class="backtogmi">
+                <ul>
+                    <li><a href="http://rating.skgmi-gtu.ru/">Вернуться к выбору подразделения</a></li>
+                    <li><a href="http://www.skgmi-gtu.ru/">Вернуться на сайт СКГМИ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_head">
+            <h3 class="backtogmi_forphone" onclick="height()">Вернуться на ...</h3>
+            <ul class="backtogmi_forphone_ul" id="backtogmi_forphone_ul">
+                <li><a href="http://www.skgmi-gtu.ru/">сайт СКГМИ</a></li>
+                <li><a href="http://rating.skgmi-gtu.ru/">сайт подразделений</a></li>
+            </ul>
+            <h5>ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ</h5>
+            <h1 class="logo_skgmi">"Северо-Кавказский горно-металлургический институт (ГТУ)"</h1>
+
+            <h2 class="logo_rait">Рейтинг кафедр</h2>
+            <ul class="menu" id="menu">
+                <li><a id="ratings" onclick="yearClick(this.id)">Интегральный рейтинг</a></li>
+                <li><a id="ygraph" onclick="yearClick(this.id)">Графики</a></li>
+                <li><a id="yprogn" onclick="yearClick(this.id)">Прогноз</a></li>
+                <li><a id="stat" onclick="yearClick(this.id)">Статистика</a></li>
+                <!--<li><a id="ycrit" href="criterion_dep.xlsx">Критерии</a></li>-->
+            </ul>
+        </div>
+    </div>
+
+    <!-- РЕЙТИНГ-->
+
+    <div id="ratingOnFak" class="ratingOnFak">
+        <h3>Интегральный рейтинг кафедр по факультетам</h3>
+        <h4>Выберите год и факультет:</h4>
+        <select id="select_year" onchange="selectYear()">
+            <option>2015</option>
+            <option>2014</option>
+            <option>2013</option>
+            <option>2012</option>
+            <option>2011</option>
+            <option>2010</option>
+        </select>
+        <select id="select_fak" onchange="deleteRow('table_rait')">
+            <option>Архитектурно-строительный факультет</option>
+            <option>Горно-геологический факультет</option>
+            <option>Металлургический факультет</option>
+            <option>Факультет информационных технологий</option>
+            <option>Факультет пищевых производств</option>
+            <option>Факультет электронной техники</option>
+            <option>Электромеханический факультет</option>
+            <option>Экономический факультет</option>
+            <option>Юридический факультет</option>
+        </select>
+        <input type="button" id="button1" class="button1" value="Загрузить кафедры" onclick="infunc('table_rait')" />
+
+        <table id="table_rait" class="table_rait">
+            <tr>
+                <th>Место</th>
+                <th>Кафедра</th>
+            </tr>
+        </table>
+
+        <div id="selYear">Общий интегральный рейтинг кафедр по данным 2015 года</div>
+        <div class="otherbr">
+            <table id="t2015" class="table_rait">
+                <tr>
+                    <th>Место</th>
+                    <th>Кафедра</th>
+                    <th>Факультет</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Горного дела</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Электронных приборов</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Экологии и техносферной безопасности</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Технологии продуктов общественного питания </td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Технологических машин и оборудования</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Строительного производства</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Экономики и управления на предприятии</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Прикладной геологии</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Автоматизированной обработки информации</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Электроснабжения промышленных предприятий</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Конституционного и административного права</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Организации и безопасности дорожного движения</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Металлургии цветных металлов</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Теории и автоматизации металлургических процессов и печей</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Информационных систем в экономике</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Промышленной электроники</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Технологии бродильных производств</td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Организации производства и экономики промышленности</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Финансов и кредита</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Архитектуры</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Технологии художественной обработки материалов</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Безопасности жизнедеятельности</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Физики</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>Предпринимательского и трудового права </td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Бухгалтерского учета и аудита</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Налогов и налогообложения</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>Обогащения полезных ископаемых</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>Гражданского права и процесса</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>Теории и истории государства и права</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>Строительных конструкций</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td>Автомобильных дорог и аэродромов</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>32</td>
+                    <td>Электропривода и автоматики</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>33</td>
+                    <td>Теоретической электротехники и электрических машин</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>34</td>
+                    <td>Уголовного права и процесса</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>35</td>
+                    <td>Сопротивления материалов и строительной механики</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>36</td>
+                    <td>Систем автоматизированного проектирования</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>37</td>
+                    <td>Истории</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td>Начертательной геометрии и черчения</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>39</td>
+                    <td>Экономической теории</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>Философии и социально-правовых дисциплин</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>Деталей машин</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>42</td>
+                    <td>Иностранных языков</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>43</td>
+                    <td>Химии</td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>Геодезии</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>45</td>
+                    <td>Математики</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>46</td>
+                    <td>Физического воспитания и спорта</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>47</td>
+                    <td>Информатики</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+            </table>
+            <table id="t2014" class="table_rait">
+                <tr>
+                    <th>Место</th>
+                    <th>Кафедра</th>
+                    <th>Факультет</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Электронных приборов</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Технологии продуктов общественного питания </td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Организации производства и экономики промышленности</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Автоматизированной обработки информации</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Конституционного и административного права</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Технологических машин и оборудования</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Металлургии цветных металлов</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Горного дела</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Безопасности жизнедеятельности</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Теории и автоматизации металлургических процессов и печей</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Прикладной геологии</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Экологии и техносферной безопасности</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Технологии бродильных производств</td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Технологии художественной обработки материалов</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Организации и безопасности дорожного движения</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Обогащения полезных ископаемых</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Архитектуры</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Информационных систем в экономике</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Экономики и управления на предприятии</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Электроснабжения промышленных предприятий</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Финансов и кредита</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Деталей машин</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Автомобильных дорог и аэродромов</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>Строительного производства</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Физики</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Истории</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>Промышленной электроники</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>Бухгалтерского учета и аудита</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>Налогов и налогообложения</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>Теоретической электротехники и электрических машин</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td>Систем автоматизированного проектирования</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>32</td>
+                    <td>Гражданского права и процесса</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>33</td>
+                    <td>Электропривода и автоматики</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>34</td>
+                    <td>Начертательной геометрии и черчения</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>35</td>
+                    <td>Теории и истории государства и права</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>36</td>
+                    <td>Строительных конструкций</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>37</td>
+                    <td>Предпринимательского и трудового права </td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td>Математики</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>39</td>
+                    <td>Сопротивления материалов и строительной механики</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>Геодезии</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>Уголовного права и процесса</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>42</td>
+                    <td>Экономической теории</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>43</td>
+                    <td>Философии и социально-правовых дисциплин</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>Химии</td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>45</td>
+                    <td>Информатики</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>46</td>
+                    <td>Иностранных языков</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>47</td>
+                    <td>Физического воспитания и спорта</td>
+                    <td>Юридический факультет</td>
+                </tr>
+            </table>
+            <table id="t2013" class="table_rait">
+                <tr>
+                    <th>Место</th>
+                    <th>Кафедра</th>
+                    <th>Факультет</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Технологии продуктов общественного питания </td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Экологии и техносферной безопасности</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Теории и автоматизации металлургических процессов и печей</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Организации производства и экономики промышленности</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Электронных приборов</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Горного дела</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Обогащения полезных ископаемых</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Электроснабжения промышленных предприятий</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Организации и безопасности дорожного движения</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Конституционного и административного права</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Автоматизированной обработки информации</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Экономики и управления на предприятии</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Металлургии цветных металлов</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Прикладной геологии</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Технологических машин и оборудования</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Информационных систем в экономике</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Технологии художественной обработки материалов</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Архитектуры</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Строительного производства</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Технологии бродильных производств</td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Теории и истории государства и права</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Финансов и кредита</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Промышленной электроники</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>Безопасности жизнедеятельности</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Налогов и налогообложения</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Физики</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>Бухгалтерского учета и аудита</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>Теоретической электротехники и электрических машин</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>Систем автоматизированного проектирования</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>Химии</td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td>Начертательной геометрии и черчения</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>32</td>
+                    <td>Автомобильных дорог и аэродромов</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>33</td>
+                    <td>Гражданского права и процесса</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>34</td>
+                    <td>Сопротивления материалов и строительной механики</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>35</td>
+                    <td>Деталей машин</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>36</td>
+                    <td>Истории</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>37</td>
+                    <td>Строительных конструкций</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td>Экономической теории</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>39</td>
+                    <td>Предпринимательского и трудового права </td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>Математики</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>Электропривода и автоматики</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>42</td>
+                    <td>Философии и социально-правовых дисциплин</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>43</td>
+                    <td>Информатики</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>Иностранных языков</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>45</td>
+                    <td>Геодезии</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>46</td>
+                    <td>Физического воспитания и спорта</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>47</td>
+                    <td>Уголовного права и процесса</td>
+                    <td>Юридический факультет</td>
+                </tr>
+            </table>
+            <table id="t2012" class="table_rait">
+                <tr>
+                    <th>Место</th>
+                    <th>Кафедра</th>
+                    <th>Факультет</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Теории и автоматизации металлургических процессов и печей</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Горного дела</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Электронных приборов</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Технологии продуктов общественного питания </td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Экологии и техносферной безопасности</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Автоматизированной обработки информации</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Технологических машин и оборудования</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Организации производства и экономики промышленности</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Обогащения полезных ископаемых</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Конституционного и административного права</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Экономики и управления на предприятии</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Электроснабжения промышленных предприятий</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Организации и безопасности дорожного движения</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Архитектуры</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Металлургии цветных металлов</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Информационных систем в экономике</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Технологии художественной обработки материалов</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Финансов и кредита</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Технологии бродильных производств</td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Строительного производства</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Физики</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Прикладной геологии</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Теории и истории государства и права</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>Налогов и налогообложения</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Предпринимательского и трудового права </td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Бухгалтерского учета и аудита</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>Безопасности жизнедеятельности</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>Деталей машин</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>Автомобильных дорог и аэродромов</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>Систем автоматизированного проектирования</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td>Начертательной геометрии и черчения</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>32</td>
+                    <td>Промышленной электроники</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>33</td>
+                    <td>Теоретической электротехники и электрических машин</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>34</td>
+                    <td>Сопротивления материалов и строительной механики</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>35</td>
+                    <td>Гражданского права и процесса</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>36</td>
+                    <td>Химии</td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>37</td>
+                    <td>Экономической теории</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td>Истории</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>39</td>
+                    <td>Строительных конструкций</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>Математики</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>Электропривода и автоматики</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>42</td>
+                    <td>Иностранных языков</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>43</td>
+                    <td>Философии и социально-правовых дисциплин</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>Геодезии</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>45</td>
+                    <td>Физического воспитания и спорта</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>46</td>
+                    <td>Информатики</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>47</td>
+                    <td>Уголовного права и процесса</td>
+                    <td>Юридический факультет</td>
+                </tr>
+            </table>
+            <table id="t2011" class="table_rait">
+                <tr>
+                    <th>Место</th>
+                    <th>Кафедра</th>
+                    <th>Факультет</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Горного дела</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Технологии продуктов общественного питания </td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Архитектуры</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Конституционного и административного права</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Экологии и техносферной безопасности</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Экономики и управления на предприятии</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Обогащения полезных ископаемых</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Электронных приборов</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Прикладной геологии</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Строительного производства</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Теории и автоматизации металлургических процессов и печей</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Организации и безопасности дорожного движения</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Металлургии цветных металлов</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Технологических машин и оборудования</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Электроснабжения промышленных предприятий</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Автоматизированной обработки информации</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Физики</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Безопасности жизнедеятельности</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Автомобильных дорог и аэродромов</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Финансов и кредита</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Информационных систем в экономике</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Промышленной электроники</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Систем автоматизированного проектирования</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>Технологии бродильных производств</td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Технологии художественной обработки материалов</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Экономической теории</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>Истории</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>Гражданского права и процесса</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>Бухгалтерского учета и аудита</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>Налогов и налогообложения</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td>Электропривода и автоматики</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>32</td>
+                    <td>Сопротивления материалов и строительной механики</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>33</td>
+                    <td>Предпринимательского и трудового права </td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>34</td>
+                    <td>Строительных конструкций</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>35</td>
+                    <td>Философии и социально-правовых дисциплин</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>36</td>
+                    <td>Химии</td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>37</td>
+                    <td>Теоретической электротехники и электрических машин</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td>Теории и истории государства и права</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>39</td>
+                    <td>Иностранных языков</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>Геодезии</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>Начертательной геометрии и черчения</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>42</td>
+                    <td>Деталей машин</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>43</td>
+                    <td>Математики</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>Информатики</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>45</td>
+                    <td>Организации производства и экономики промышленности</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>46</td>
+                    <td>Уголовного права и процесса</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>47</td>
+                    <td>Физического воспитания и спорта</td>
+                    <td>Юридический факультет</td>
+                </tr>
+            </table>
+            <table id="t2010" class="table_rait">
+                <tr>
+                    <th>Место</th>
+                    <th>Кафедра</th>
+                    <th>Факультет</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Архитектуры</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Горного дела</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Экономики и управления на предприятии</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Финансов и кредита</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Бухгалтерского учета и аудита</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Организации и безопасности дорожного движения</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Промышленной электроники</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Технологии продуктов общественного питания </td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Электронных приборов</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Строительного производства</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Автомобильных дорог и аэродромов</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Информационных систем в экономике</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Металлургии цветных металлов</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Конституционного и административного права</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Теории и истории государства и права</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Уголовного права и процесса</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Прикладной геологии</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Автоматизированной обработки информации</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Теории и автоматизации металлургических процессов и печей</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Технологии бродильных производств</td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Электроснабжения промышленных предприятий</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Технологических машин и оборудования</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Гражданского права и процесса</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>Организации производства и экономики промышленности</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Экономической теории</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Налогов и налогообложения</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>Систем автоматизированного проектирования</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>Обогащения полезных ископаемых</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>Экологии и техносферной безопасности</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>Электропривода и автоматики</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td>Технологии художественной обработки материалов</td>
+                    <td>Металлургический факультет</td>
+                </tr>
+                <tr>
+                    <td>32</td>
+                    <td>Безопасности жизнедеятельности</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>33</td>
+                    <td>Физики</td>
+                    <td>Факультет электронной техники</td>
+                </tr>
+                <tr>
+                    <td>34</td>
+                    <td>Предпринимательского и трудового права </td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>35</td>
+                    <td>Строительных конструкций</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>36</td>
+                    <td>Теоретической электротехники и электрических машин</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>37</td>
+                    <td>Сопротивления материалов и строительной механики</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td>Истории</td>
+                    <td>Экономический факультет</td>
+                </tr>
+                <tr>
+                    <td>39</td>
+                    <td>Начертательной геометрии и черчения</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>Философии и социально-правовых дисциплин</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>Деталей машин</td>
+                    <td>Электромеханический факультет</td>
+                </tr>
+                <tr>
+                    <td>42</td>
+                    <td>Иностранных языков</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>43</td>
+                    <td>Химии</td>
+                    <td>Факультет пищевых производств</td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>Геодезии</td>
+                    <td>Архитектурно-строительный факультет</td>
+                </tr>
+                <tr>
+                    <td>45</td>
+                    <td>Математики</td>
+                    <td>Горно-геологический факультет</td>
+                </tr>
+                <tr>
+                    <td>46</td>
+                    <td>Физического воспитания и спорта</td>
+                    <td>Юридический факультет</td>
+                </tr>
+                <tr>
+                    <td>47</td>
+                    <td>Информатики</td>
+                    <td>Факультет информационных технологий</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="container_for_graphics">
+        <h3 class="hh3">Графическое представление рейтинга кафедр по факультетам:</h3>
+        <p class="container_p">Архитектурно-строительный факультет:</p>
+        <div id="graphic_asf"></div>
+        <div class="space"></div>
+
+        <p class="container_p">Горно-геологический факультет:</p>
+        <div id="graphic_ggf"></div>
+        <div class="space"></div>
+
+
+        <p class="container_p">Металлургический факультет:</p>
+        <div id="graphic_mf"></div>
+        <div class="space"></div>
+
+
+        <p class="container_p">Факультет информационных технологий:</p>
+        <div id="graphic_fit"></div>
+        <div class="space"></div>
+
+
+        <p class="container_p">Факультет пищевых производств:</p>
+        <div id="graphic_fpp"></div>
+        <div class="space"></div>
+
+
+        <p class="container_p">Факультет электронной техники:</p>
+        <div id="graphic_fet"></div>
+        <div class="space"></div>
+
+
+        <p class="container_p">Экономический факультет:</p>
+        <div id="graphic_ef"></div>
+        <div class="space"></div>
+
+
+        <p class="container_p">Электромеханический факультет:</p>
+        <div id="graphic_emf"></div>
+        <div class="space"></div>
+
+
+        <p class="container_p">Юридический факультет</p>
+        <div id="graphic_uf"></div>
+        <div class="space"></div>
+    </div>
+
+    <div id="progn" class="progn">
+        <!-- прогнозируемые места кафедр-->
+
+        <h3 class="hh3">Интегральный прогноз рейтинга кафедры на факультете на 2016 год:</h3>
+
+        <p class="container_p">Архитектурно-строительный факультет</p>
+        <table class="table_rait">
+            <tr>
+                <th>Наименование кафедры</th>
+                <th>Прогнозируемое место</th>
+            </tr>
+            <tr>
+                <td>АДА</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>АРХ</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>НГиЧ</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>СК</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>СМиСМ</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>СП</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>ОБДД</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>РГиГ</td>
+                <td>8</td>
+            </tr>
+        </table>
+        <div class="space"></div>
+
+        <p class="container_p">Горно-геологический факультет</p>
+        <table class="table_rait">
+            <tr>
+                <th>Наименование кафедры</th>
+                <th>Прогнозируемое место</th>
+            </tr>
+            <tr>
+                <td>ПГ</td>
+                <td>3 или 4</td>
+            </tr>
+            <tr>
+                <td>ГД</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>ЭиТБ</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Математика</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>БЖД</td>
+                <td>3 или 4</td>
+            </tr>
+        </table>
+        <div class="space"></div>
+
+
+        <p class="container_p">Металлургический факультет</p>
+        <table class="table_rait">
+            <tr>
+                <th>Наименование кафедры</th>
+                <th>Прогнозируемое место</th>
+            </tr>
+            <tr>
+                <td>ТХОМ</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>МЦМ</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>ТАМПиП</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>ОПИ</td>
+                <td>4</td>
+            </tr>
+        </table>
+        <div class="space"></div>
+
+
+        <p class="container_p">Факультет информационных технологий</p>
+        <table class="table_rait">
+            <tr>
+                <th>Наименование кафедры</th>
+                <th>Прогнозируемое место</th>
+            </tr>
+            <tr>
+                <td>АОИ</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>САПР</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Информатика</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>ИС</td>
+                <td>2</td>
+            </tr>
+        </table>
+        <div class="space"></div>
+
+
+        <p class="container_p">Факультет пищевых производств</p>
+        <table class="table_rait">
+            <tr>
+                <th>Наименование кафедры</th>
+                <th>Прогнозируемое место</th>
+            </tr>
+            <tr>
+                <td>Химия</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>ТПОП</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>ТБП</td>
+                <td>2</td>
+            </tr>
+        </table>
+        <div class="space"></div>
+
+
+        <p class="container_p">Факультет электронной техники</p>
+        <table class="table_rait">
+            <tr>
+                <th>Наименование кафедры</th>
+                <th>Прогнозируемое место</th>
+            </tr>
+            <tr>
+                <td>ЭП</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>ПЭ</td>
+                <td>2 или 3</td>
+            </tr>
+            <tr>
+                <td>Физика</td>
+                <td>2 или 3</td>
+            </tr>
+        </table>
+        <div class="space"></div>
+
+
+        <p class="container_p">Электромеханический факультет</p>
+        <table class="table_rait">
+            <tr>
+                <th>Наименование факультета</th>
+                <th>Прогнозируемое место</th>
+            </tr>
+            <tr>
+                <td>ТМО</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>ЭА</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>ЭПП</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>ДМ</td>
+                <td>3 или 4</td>
+            </tr>
+            <tr>
+                <td>ТЭиЭМ</td>
+                <td>3 или 4</td>
+            </tr>
+        </table>
+        <div class="space"></div>
+
+
+        <p class="container_p">Экономический факультет</p>
+        <table class="table_rait">
+            <tr>
+                <th>Наименование кафедры</th>
+                <th>Прогнозируемое место</th>
+            </tr>
+            <tr>
+                <td>ФК</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>БУА</td>
+                <td>4 или 5</td>
+            </tr>
+            <tr>
+                <td>ЭТ</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>НН</td>
+                <td>4 или 5</td>
+            </tr>
+            <tr>
+                <td>История</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>ОПиЭП</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>ЭУП</td>
+                <td>2</td>
+            </tr>
+        </table>
+        <div class="space"></div>
+
+
+        <p class="container_p">Юридический факультет</p>
+        <table class="table_rait">
+            <tr>
+                <th>Наименование кафедры</th>
+                <th>Прогнозируемое место</th>
+            </tr>
+            <tr>
+                <td>ГПиП</td>
+                <td>2 или 3</td>
+            </tr>
+            <tr>
+                <td>ИЯ</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>ФВиС</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>ТиИГиП</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>ПиТП</td>
+                <td>2 или 3</td>
+            </tr>
+            <tr>
+                <td>КиАП</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>УПиП</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>ФиН</td>
+                <td>6</td>
+            </tr>
+        </table>
+        <div class="space"></div>
+
+    </div>
+    <!-- конец прогнозируемые кафедры-->
+
+    <div id="statistic">
+        <h3 class="hh3">Статистистические данные по указанной кафедре</h3>
+        <span class="span_dep_text">Начните вводить название кафедры или факультета с учетом регистра...</span>
+        <input type="text" id="dep_name_edit" class="edit" />
+        <input type="button" id="live_search_button" onclick="live_search()" value="Поиск" />
+        <label id="dep_label" class="dep_label"></label>
+        <input type="button" id="all_dep_button" class="button1" value="Показать весь список кафедр" onclick="all_dep_load()" />
+        <ul id="dep_list" class="dep_list"></ul>
+        <h3 id="dep_big_name" class="span-text"></h3>
+        <div id="info_block" class="info_block">
+            <table id="dep_info_table" class="table_rait">
+                <tr>
+                    <th>Год</th>
+                    <th>Место по ВУЗу</th>
+                    <th>Место по факультету</th>
+                </tr>
+            </table>
+            <div id="info_graphic"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p class="prikaz">
+            Оценочные критерии:
+        </p>
+        <ul style="list-style: circle">
+            <li>посещаемость;</li>
+            <li>успеваемость;</li>
+            <li>процент несовпадения посещаемости, введенной кафедрой и деканатом;</li>
+            <li>
+                процент низко мотивированных оценок в сессии, т.е. таких, которые не соответствуют результатам рейтингов
+                и текущей успеваемости;
+            </li>
+            <li>процент случаев, когда второй рейтинг хуже первого;</li>
+            <li>средняя заработная плата ППС кафедр факультетов;</li>
+            <li>публикации.</li>
+        </ul>
+        <a class="button1" href="criterion_dep.xlsx">Скачать файл с исходными данными критериев в формате .xlsx</a>
+    </div>
+</body>
+
+</html>

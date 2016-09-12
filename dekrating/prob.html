@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <title>Рейтинг деканатов | СКГМИ</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery.js"></script>
+    <style>
+        #black{
+            background-color: black;
+            width: 500px;
+            height: 250px;
+            visibility: hidden;
+        }
+        #yellow{
+            background-color: yellow;
+            width: 500px;
+            height: 250px;
+        }
+    </style>
+        <script>
+            function show(){
+                document.getElementById('black').style.visibility = 'visible';
+            }
+            
+            function hide(){
+                document.getElementById('black').style.visibility = 'hidden';
+            }
+        </script>
+    </head>
+    <body>
+        <input id="hide" type="button" value="Скрыть" onclick="hide()"/>
+        <input id="show" type="button" value="Показать" onclick="show()"/>
+    <div id="black"></div>
+    <div id="yellow"></div>
+    </body>

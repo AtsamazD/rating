@@ -1,0 +1,35 @@
+    <html>  
+    <head>  
+    <meta http-equiv="Content-Type" content="text/html; Charset=UTF-8">  
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+   <style>
+       .content{
+           display: none;
+       }
+   </style>
+    </head>  
+      
+    <body>  
+          
+        <ul class="content" id="content"></ul>  
+          
+        <script>  
+        function show()  
+        {  
+            $.ajax({  
+                url: "php.php",  
+                cache: false,  
+                success: function(html){  
+                    $("#content").html(html);  
+                }  
+            });  
+        }  
+      
+        //$(document).ready(function(){  
+           // show();  
+            //setInterval('show()',1000);  
+        //});  
+    </script>  
+          <input id="button" type="button" value="Click" onclick="show()"/>
+    </body>  
+    </html>  

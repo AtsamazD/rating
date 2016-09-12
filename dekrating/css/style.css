@@ -1,0 +1,316 @@
+ body{
+    width: 70%;
+    margin: auto;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:active{
+}
+
+a:visited{
+    color: white;
+}
+
+a:hover{
+}
+
+.header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    background-color: #192A78;
+    border-bottom: 5px solid #7884d0;
+    box-shadow: 0px 3px 25px -3px rgba(0,0,0,0.75);
+
+}
+
+.header_head{
+    margin-left: 0;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.logo_back{
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.logo_back:hover .backtogmi{
+    display: block;
+}
+
+.backtogmi {
+    width: auto;
+    margin: auto;
+    color: #192A78;
+    border: solid 1px #ddd;
+    padding: 8px;
+    display: none;
+    position: absolute;
+    margin-top:0;
+    background-color: #fff;
+}
+
+.backtogmi_forphone {
+    display: none;
+    color: #7884d0;
+    font-weight: bold;
+}
+
+.backtogmi ul{
+    margin: 0;
+    padding: 0;
+
+}
+
+.backtogmi ul li{
+    list-style: none;
+    margin: 0;
+    padding: 8px;
+}
+
+.backtogmi ul li a{
+    color: black;
+}
+
+.backtogmi ul li:hover{
+    text-decoration: underline;
+}
+
+.header h5{
+    color: white;
+    margin: 0 0 10px 2px;
+    padding-top: 8px;
+}
+
+.header h4{
+    color: white;
+    margin: 0 0 10px 2px;
+    padding: 0;
+}
+
+.logo_rait {
+    color: #192A78;
+    padding: 4px;
+    background-color: white;
+}
+
+.logo_img{
+    max-width: 180px;
+    max-height: 170px;
+    padding-top: 20px;
+   /* width: 8%;
+    height: 8%;*/
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.logo_skgmi {
+    color: white;
+    font-size: x-large;
+    margin-top: 0;
+}
+
+h1{
+}
+
+.menu_row{
+    display: flex;
+}
+
+.year_select{
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 25pt;
+	width: 60pt;
+    padding: 1%;
+    font-weight: bold;
+    color: #192A78;
+}
+
+.menu{
+    padding: 0;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.menu li{
+    cursor: pointer;
+    display: inline;
+    padding: 8px;
+    font-size: x-large;
+}
+
+.menu li a{
+    padding: 5px;
+    color: white;
+}
+
+.alltable{
+    display: none;
+}
+
+.content {
+    height: auto;
+    padding: 10px;
+    background-color: white;
+}
+
+.table_rait th{
+    color: white;
+    border: 1px solid #192A78;
+    padding: 4px;
+    background: #192A78;
+}
+
+.table_rait td{
+    color: black;
+    border: 1px solid #ddd;
+    padding: 4px;
+    background: white;
+}
+
+
+.table_rait td:hover{
+    /*background-color: #ddd;
+    color: black;
+    cursor: pointer;*/
+}
+
+
+#t2014
+{
+    display: none;
+}
+
+#t2013{
+    display: none;
+}
+#t2012{
+    display: none;
+}
+#t2011{
+    display: none;
+}
+#t2010{
+    display: none;
+}
+#progn{
+    display: none;
+}
+
+ #graphic, #graphic_attend, #graphic_uspev, 
+ #graphic_zp, #graphic_asp, #graphic_badRait, 
+ #graphic_fin, #graphic_lowMark{
+    width: 600px;
+    height: 400px;
+    /*min-width: 640px;
+    min-height: 480px;*/
+}
+
+#container, #iegraph{
+    display: none;
+}
+
+#container_p{
+    color: #192A78;
+    font-size: x-large;
+    padding-top: 20px;
+}
+
+.progn_crit_tbs td{
+    padding: 6px;
+}
+
+#czp td{
+    padding: 2px;
+}
+
+.crit_p{
+    text-decoration: underline;
+}
+
+.input-button{
+    border: 0;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.input-button:hover{
+    color: #192A78;
+    text-decoration: underline;
+}
+
+.prikaz{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #808080;
+}
+
+    .prikaz + ul
+    {
+        color: #808080;
+    }
+
+.footer {
+    width: 1080px;
+    color: black;
+    height: auto;
+    display: flex;
+    margin-top: 5px;
+}
+
+.divpad{
+    /*padding: 5%;*/
+}
+
+#selYear{
+    color: #192A78;
+    margin: 1%;
+    font-weight: bold;
+    font-size: 18pt;
+}
+
+
+
+
+
+
+
+@media (max-width: 840px) {
+    body{
+    width: 100%;
+    margin: 0;
+    }
+    
+    .logo_back{
+        display: none;
+    }
+    
+    .content{
+        margin-left: 0;
+    }
+    
+    .backtogmi{
+        display: block;
+        position: inherit;
+    }
+    
+    .backtogmi_forphone {
+        display: block;
+    }
+}
+
+

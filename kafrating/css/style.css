@@ -1,44 +1,10 @@
-﻿body {
-    width: 70%;
-    margin: auto;
-    padding: 0;
-    font-family: sans-serif;
-}
+﻿
 
 .kafbuf {
     display: none;
 }
 
-.beta_smyle {
-    float: left;
-    position: fixed;
-    margin: 10px;
-    left: 0;
-    padding: 10px;
-    color: #192A78;
-    background-color: #ddd;
-    font-weight: bold;
-}
-
-.beta {
-    float: left;
-    position: fixed;
-    margin: 10px;
-    left: 0;
-    background-color: #192A78;
-    color: #eee;
-    padding: 10px;
-    cursor: pointer;
-    transition: 0.7s;
-    font-weight: bold;
-    /*box-shadow: 0px 3px 25px -3px rgba(0,0,0,0.75);*/
-}
-
-    .beta:hover {
-        left: 30px;
-        content: "УИИИ!";
-    }
-
+/*
 a {
     color: black;
     text-decoration: none;
@@ -49,21 +15,13 @@ a {
         color: white;
     }
 
-
+*/
 
 .header {
-    width: 100%;
-    height: auto;
-    display: flex;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -moz-flex;
-    display: -webkit-flex;
-    background-color: #192A78;
-    border-bottom: 5px solid #7884D0;
-    /*box-shadow: 0px 3px 25px -3px rgba(0,0,0,0.75);*/
+    padding-top: 20px;
 }
+
+/*
 
 .header_head {
     width: 800px;
@@ -81,6 +39,7 @@ a {
         display: block;
     }
 
+	*/
 .backtogmi {
     width: auto;
     margin: auto;
@@ -122,10 +81,7 @@ a {
             text-decoration: underline;
         }
 
-.backtogmi_forphone_ul {
-    display: none;
-    height: 0;
-}
+/*	
 
 .button1 {
     margin: 10px;
@@ -158,9 +114,7 @@ a {
 .logo_img {
     max-width: 180px;
     max-height: 170px;
-    padding-top: 20px;
-    /* width: 8%;
-    height: 8%;*/
+    padding-top: 20px;   
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -171,26 +125,20 @@ a {
     margin-top: 0;
 }
 
+*/
+
+
 .menu {
-    padding: 0;
-    display: inline-block;
-    margin-top: 0;
+    padding-top: 0px;       
     margin-bottom: 0;
 }
 
     .menu li {
-        cursor: pointer;
-        display: inline;
-        padding: 8px;
-        margin-top: 15px;
-        font-size: x-large;
+        cursor: pointer;     
+			
     }
-
-        .menu li a {
-            padding: 5px;
-            color: white;
-        }
-
+		
+		
 .dep_list {
     list-style: none;
     width: 70%;
@@ -244,10 +192,12 @@ a {
     align-items: center;
 }
 
+
 .alltable {
     display: none;
 }
 
+/*
 .ratingOnFak, .container_for_graphics, .progn {
     height: auto;
     padding: 10px;
@@ -267,6 +217,8 @@ a {
     padding: 4px;
     background: white;
 }
+
+*/
 
 #t2014 {
     display: none;
@@ -292,19 +244,22 @@ a {
     display: none;
 }
 
+
+/*
 #graphic, #graphic_attend, #graphic_uspev,
 #graphic_zp, #graphic_asp, #graphic_badRait,
 #graphic_fin, #graphic_lowMark {
     width: 600px;
-    height: 400px;
-    /*min-width: 640px;
-    min-height: 480px;*/
+    height: 400px;   
 }
+*/
+
 
 #progn, #statistic, #container_for_graphics {
     display: none;
 }
 
+/*
 .container_p {
     color: #192A78;
     font-size: x-large;
@@ -343,8 +298,7 @@ a {
     width: auto;
     color: #808080;
     height: auto;
-    /*display: flex;*/
-    margin-top: 5px;
+	margin-top: 5px;
 }
 
 #selYear {
@@ -391,10 +345,10 @@ a {
         margin: 4px;
     }
 
+*/
 
 
-
-
+/*
 
 @media (max-width: 840px) {
     body {
@@ -451,3 +405,5 @@ a {
         display: none;
     }
 }
+
+*/

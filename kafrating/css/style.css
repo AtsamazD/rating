@@ -40,6 +40,7 @@ a {
     }
 
 	*/
+
 .backtogmi {
     width: auto;
     margin: auto;
@@ -81,18 +82,13 @@ a {
             text-decoration: underline;
         }
 
-/*	
+
 
 .button1 {
-    margin: 10px;
-    background-color: #192A78;
-    color: #fff;
-    padding: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    border: 0;
+    display: none;
 }
 
+/*	
 .header h5 {
     color: white;
     margin: 0 0 10px 2px;
@@ -244,6 +240,10 @@ a {
     display: none;
 }
 
+
+.graphic{
+	margin-top: 20px;
+}
 
 /*
 #graphic, #graphic_attend, #graphic_uspev,

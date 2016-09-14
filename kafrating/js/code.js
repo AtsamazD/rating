@@ -1,11 +1,14 @@
 function graphic_asf() {
             $('#graphic_asf').highcharts({
+				chart: {
+					width: 600
+				},
                 title: {
-                    text: 'Кафедры',
+                    text: 'Архитектурно-строительный факультет',
                     x: -20 //center
                 },
                 subtitle: {
-                    text: 'СКГМИ',
+                    text: 'Кафедры',
                     x: -20
                 },
                 xAxis: {
@@ -84,12 +87,15 @@ function graphic_asf() {
         };
         function graphic_ggf() {
             $('#graphic_ggf').highcharts({
+				chart: {
+					width: 600
+				},
                 title: {
-                    text: 'Кафедры',
+                    text: 'Горно-геологический факультет',
                     x: -20 //center
                 },
                 subtitle: {
-                    text: 'СКГМИ',
+                    text: 'Кафедры',
                     x: -20
                 },
                 xAxis: {
@@ -139,12 +145,15 @@ function graphic_asf() {
         };
         function graphic_mf() {
             $('#graphic_mf').highcharts({
+				chart: {
+					width: 600
+				},
                 title: {
-                    text: 'Кафедры',
+                    text: 'Металлургический факультет',
                     x: -20 //center
                 },
                 subtitle: {
-                    text: 'СКГМИ',
+                    text: 'Кафедры',
                     x: -20
                 },
                 xAxis: {
@@ -191,12 +200,15 @@ function graphic_asf() {
         };
         function graphic_fit() {
             $('#graphic_fit').highcharts({
+				chart: {
+					width: 600
+				},
                 title: {
-                    text: 'Кафедры',
+                    text: 'Факультет информационных технологий',
                     x: -20 //center
                 },
                 subtitle: {
-                    text: 'СКГМИ',
+                    text: 'Кафедры',
                     x: -20
                 },
                 xAxis: {
@@ -243,12 +255,15 @@ function graphic_asf() {
         };
         function graphic_fpp() {
             $('#graphic_fpp').highcharts({
+				chart: {
+					width: 600
+				},
                 title: {
-                    text: 'Кафедры',
+                    text: 'Факультет пищевых производств',
                     x: -20 //center
                 },
                 subtitle: {
-                    text: 'СКГМИ',
+                    text: 'Кафедры',
                     x: -20
                 },
                 xAxis: {
@@ -292,12 +307,15 @@ function graphic_asf() {
         };
         function graphic_fet() {
             $('#graphic_fet').highcharts({
+				chart: {
+					width: 600
+				},
                 title: {
-                    text: 'Кафедры',
+                    text: 'Факультет электронной техники',
                     x: -20 //center
                 },
                 subtitle: {
-                    text: 'СКГМИ',
+                    text: 'Кафедры',
                     x: -20
                 },
                 xAxis: {
@@ -341,12 +359,15 @@ function graphic_asf() {
         };
         function graphic_ef() {
             $('#graphic_ef').highcharts({
+				chart: {
+					width: 600
+				},
                 title: {
-                    text: 'Кафедры',
+                    text: 'Экономический факультет',
                     x: -20 //center
                 },
                 subtitle: {
-                    text: 'СКГМИ',
+                    text: 'Кафедры',
                     x: -20
                 },
                 xAxis: {
@@ -402,12 +423,15 @@ function graphic_asf() {
         };
         function graphic_emf() {
             $('#graphic_emf').highcharts({
+				chart: {
+					width: 600
+				},
                 title: {
-                    text: 'Кафедры',
+                    text: 'Электромеханический факультет',
                     x: -20 //center
                 },
                 subtitle: {
-                    text: 'СКГМИ',
+                    text: 'Кафедры',
                     x: -20
                 },
                 xAxis: {
@@ -457,12 +481,15 @@ function graphic_asf() {
         };
         function graphic_uf() {
             $('#graphic_uf').highcharts({
+				chart: {
+					width: 600
+				},
                 title: {
-                    text: 'Cредняя заработная плата ППС кафедр факультетов',
+                    text: 'Юридический факультет',
                     x: -20 //center
                 },
                 subtitle: {
-                    text: 'СКГМИ',
+                    text: 'Кафедры',
                     x: -20
                 },
                 xAxis: {
@@ -593,8 +620,8 @@ function graphic_asf() {
             var year = select_year.options[select_year.selectedIndex].text;
             var obj = document.getElementById('selYear');
             deleteRow('table_rait');
-
-            cells_color();
+			infunc("table_rait");
+            //cells_color();
             switch (year) {
                 case '2015':
                     obj.innerHTML = 'Общий интегральный рейтинг кафедр по данным 2015 года';
@@ -657,14 +684,66 @@ function graphic_asf() {
                     document.getElementById('t2015').style.display = "none";
                     break;
                 default:
-
+					
                     break;
             }
         }
 
+function selectChange(fak){
+	switch (fak){
+		case 'asf':
+			$(".graphic").css("display", "none");
+			$("#graphic_asf").css("display", "block");
+			graphic_asf();
+			break;		
+		case 'ggf':
+			$(".graphic").css("display", "none");
+			$("#graphic_ggf").css("display", "block");
+			graphic_ggf();
+			break;			
+		case 'ef':
+			$(".graphic").css("display", "none");
+			$("#graphic_ef").css("display", "block");
+			graphic_ef();
+			break;			
+		case 'emf':
+			$(".graphic").css("display", "none");
+			$("#graphic_emf").css("display", "block");
+			graphic_emf();
+			break;
+		case 'fpp':
+			$(".graphic").css("display", "none");
+			$("#graphic_fpp").css("display", "block");
+			graphic_fpp();
+			break;
+		case 'fit':
+			$(".graphic").css("display", "none");
+			$("#graphic_fit").css("display", "block");
+			graphic_fit();
+			break;
+		case 'fet':
+			$(".graphic").css("display", "none");
+			$("#graphic_fet").css("display", "block");
+			graphic_fet();
+			break;
+		case 'mf':
+			$(".graphic").css("display", "none");
+			$("#graphic_mf").css("display", "block");
+			graphic_mf();
+			break;
+		case 'uf':
+			$(".graphic").css("display", "none");
+			$("#graphic_uf").css("display", "block");
+			graphic_uf();
+			break;
+		default:
+		
+			break;
+	}
+}
+		
 function yearClick(year) {
-            var obj = document.getElementById('selYear');
-						
+            var obj = document.getElementById('selYear');						
             switch (year) {
                 case 'ratings':                    
                     $("#ratingOnFak").css("display", "block");
@@ -677,7 +756,7 @@ function yearClick(year) {
 					
                 case 'ygraph':
                     graphic_asf();
-                    graphic_ggf();
+                    /*graphic_ggf();
                     graphic_ef();
                     graphic_emf();
                     graphic_fpp();
@@ -685,12 +764,8 @@ function yearClick(year) {
                     graphic_fet();
                     graphic_mf();
                     graphic_uf();
-
-                    /*document.getElementById("ratings").style.backgroundColor = "rgba(0, 0, 0, 0)";
-                    document.getElementById('stat').style.backgroundColor = "rgba(0, 0, 0, 0)";
-                    document.getElementById('ygraph').style.backgroundColor = "#7884D0";
-                    document.getElementById('yprogn').style.backgroundColor = "rgba(0, 0, 0, 0)";*/
-
+				*/
+                    
 					$("#menu li").removeClass('active');
 					$("#graph").addClass('active');
 					
@@ -700,11 +775,7 @@ function yearClick(year) {
                     document.getElementById('statistic').style.display = "none";
 
                     break;
-                case 'yprogn':
-                    /*document.getElementById("ratings").style.backgroundColor = "rgba(0, 0, 0, 0)";
-                    document.getElementById('ygraph').style.backgroundColor = "rgba(0, 0, 0, 0)";
-                    document.getElementById('stat').style.backgroundColor = "rgba(0, 0, 0, 0)";
-                    document.getElementById('yprogn').style.backgroundColor = "#7884D0";*/
+                case 'yprogn':                    
 					$("#menu li").removeClass('active');
 					$("#prog").addClass('active');
 					
@@ -714,11 +785,7 @@ function yearClick(year) {
                     document.getElementById('statistic').style.display = "none";
 
                     break;
-                case 'stat':
-                    /*document.getElementById("ratings").style.backgroundColor = "rgba(0, 0, 0, 0)";
-                    document.getElementById('ygraph').style.backgroundColor = "rgba(0, 0, 0, 0)";
-                    document.getElementById('yprogn').style.backgroundColor = "rgba(0, 0, 0, 0)";
-                    document.getElementById('stat').style.backgroundColor = "#7884D0";*/
+                case 'stat':                    
 					$("#menu li").removeClass('active');
 					$("#stati").addClass('active');
 					
@@ -735,7 +802,8 @@ function yearClick(year) {
 
         window.onload = function () {
             //document.getElementById('ratings').style.backgroundColor = "#7884D0";
-            cells_color();
+            //cells_color();
+			infunc("table_rait");
         }
 
         function cells_color() {
@@ -959,6 +1027,7 @@ function yearClick(year) {
             }
         }
 
+/*
         window.addEventListener('click', function (e) {
             var element_txt = document.elementFromPoint(e.clientX, e.clientY).innerHTML;
             var table = document.getElementById('t2014');
@@ -969,7 +1038,7 @@ function yearClick(year) {
                     count = 0;
                     for (var i = 0; i < table.rows.length; i++) {
                         if (table.rows[i].cells[2].innerHTML == element_txt) {
-                            temp = temp + "\n" + /*table.rows[i].cells[2].innerHTML + "  " +*/ table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
+                            temp = temp + "\n" + table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
                         }
                     }
                     alert(temp);
@@ -980,7 +1049,7 @@ function yearClick(year) {
                     count = 0;
                     for (var i = 0; i < table.rows.length; i++) {
                         if (table.rows[i].cells[2].innerHTML == element_txt) {
-                            temp = temp + "\n" + /*table.rows[i].cells[2].innerHTML + "  " +*/ table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
+                            temp = temp + "\n" + table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
                         }
                     }
                     alert(temp);
@@ -991,7 +1060,7 @@ function yearClick(year) {
                     count = 0;
                     for (var i = 0; i < table.rows.length; i++) {
                         if (table.rows[i].cells[2].innerHTML == element_txt) {
-                            temp = temp + "\n" + /*table.rows[i].cells[2].innerHTML + "  " +*/ table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
+                            temp = temp + "\n" + table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
                         }
                     }
                     alert(temp);
@@ -1002,7 +1071,7 @@ function yearClick(year) {
                     count = 0;
                     for (var i = 0; i < table.rows.length; i++) {
                         if (table.rows[i].cells[2].innerHTML == element_txt) {
-                            temp = temp + "\n" + /*table.rows[i].cells[2].innerHTML + "  " +*/ table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
+                            temp = temp + "\n" + table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
                         }
                     }
                     alert(temp);
@@ -1013,7 +1082,7 @@ function yearClick(year) {
                     count = 0;
                     for (var i = 0; i < table.rows.length; i++) {
                         if (table.rows[i].cells[2].innerHTML == element_txt) {
-                            temp = temp + "\n" + /*table.rows[i].cells[2].innerHTML + "  " +*/ table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
+                            temp = temp + "\n" + table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
                         }
                     }
                     alert(temp);
@@ -1024,7 +1093,7 @@ function yearClick(year) {
                     count = 0;
                     for (var i = 0; i < table.rows.length; i++) {
                         if (table.rows[i].cells[2].innerHTML == element_txt) {
-                            temp = temp + "\n" + /*table.rows[i].cells[2].innerHTML + "  " +*/ table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
+                            temp = temp + "\n" + table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
                         }
                     }
                     alert(temp);
@@ -1035,7 +1104,7 @@ function yearClick(year) {
                     count = 0;
                     for (var i = 0; i < table.rows.length; i++) {
                         if (table.rows[i].cells[2].innerHTML == element_txt) {
-                            temp = temp + "\n" + /*table.rows[i].cells[2].innerHTML + "  " +*/ table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
+                            temp = temp + "\n" + table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
                         }
                     }
                     alert(temp);
@@ -1046,7 +1115,7 @@ function yearClick(year) {
                     count = 0;
                     for (var i = 0; i < table.rows.length; i++) {
                         if (table.rows[i].cells[2].innerHTML == element_txt) {
-                            temp = temp + "\n" + /*table.rows[i].cells[2].innerHTML + "  " +*/ table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
+                            temp = temp + "\n" + table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
                         }
                     }
                     alert(temp);
@@ -1057,7 +1126,7 @@ function yearClick(year) {
                     count = 0;
                     for (var i = 0; i < table.rows.length; i++) {
                         if (table.rows[i].cells[2].innerHTML == element_txt) {
-                            temp = temp + "\n" + /*table.rows[i].cells[2].innerHTML + "  " +*/ table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
+                            temp = temp + "\n" + table.rows[i].cells[0].innerHTML + "  " + table.rows[i].cells[1].innerHTML;
                         }
                     }
                     alert(temp);
@@ -1067,7 +1136,7 @@ function yearClick(year) {
                     break;
             }
         }, false);
-
+*/
         function deleteRow(tableID) {
             try {
                 var table = document.getElementById(tableID);

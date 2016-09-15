@@ -193,6 +193,10 @@ a {
     display: none;
 }
 
+.table_rait_prog{
+	width: 60%;
+}
+
 /*
 .ratingOnFak, .container_for_graphics, .progn {
     height: auto;
@@ -215,6 +219,11 @@ a {
 }
 
 */
+
+#p_ggf, #p_mf, #p_fit, #p_fpp, #p_fet, #p_emf, #p_ef, #p_uf
+{
+	display: none;
+}
 
 #t2014 {
     display: none;

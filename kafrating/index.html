@@ -1601,9 +1601,21 @@ and open the template in the editor.
         <!-- прогнозируемые места кафедр-->
 
         <h3 class="hh3">Интегральный прогноз рейтинга кафедры на факультете на 2016 год:</h3>
+		<i>Выберите факультет из выпадающего списка: </i>
+		<select id="select_fak_progn" onchange="selectChangeProg(this.options[this.selectedIndex].value)">
+				<option value="p_asf">Архитектурно-строительный факультет</option>
+				<option value="p_ggf">Горно-геологический факультет</option>
+				<option value="p_mf">Металлургический факультет</option>
+				<option value="p_fit">Факультет информационных технологий</option>
+				<option value="p_fpp">Факультет пищевых производств</option>
+				<option value="p_fet">Факультет электронной техники</option>
+				<option value="p_emf">Электромеханический факультет</option>
+				<option value="p_ef">Экономический факультет</option>
+				<option value="p_uf">Юридический факультет</option>
+			</select>
 
-        <p class="container_p">Архитектурно-строительный факультет</p>
-        <table class="table_rait">
+      
+        <table id="p_asf" class="table_rait_prog">
             <tr>
                 <th>Наименование кафедры</th>
                 <th>Прогнозируемое место</th>
@@ -1643,8 +1655,8 @@ and open the template in the editor.
         </table>
         <div class="space"></div>
 
-        <p class="container_p">Горно-геологический факультет</p>
-        <table class="table_rait">
+
+        <table id="p_ggf" class="table_rait_prog">
             <tr>
                 <th>Наименование кафедры</th>
                 <th>Прогнозируемое место</th>
@@ -1672,9 +1684,7 @@ and open the template in the editor.
         </table>
         <div class="space"></div>
 
-
-        <p class="container_p">Металлургический факультет</p>
-        <table class="table_rait">
+        <table id="p_mf" class="table_rait_prog">
             <tr>
                 <th>Наименование кафедры</th>
                 <th>Прогнозируемое место</th>
@@ -1698,9 +1708,7 @@ and open the template in the editor.
         </table>
         <div class="space"></div>
 
-
-        <p class="container_p">Факультет информационных технологий</p>
-        <table class="table_rait">
+        <table id="p_fit" class="table_rait_prog">
             <tr>
                 <th>Наименование кафедры</th>
                 <th>Прогнозируемое место</th>
@@ -1724,9 +1732,7 @@ and open the template in the editor.
         </table>
         <div class="space"></div>
 
-
-        <p class="container_p">Факультет пищевых производств</p>
-        <table class="table_rait">
+        <table id="p_fpp" class="table_rait_prog">
             <tr>
                 <th>Наименование кафедры</th>
                 <th>Прогнозируемое место</th>
@@ -1746,9 +1752,7 @@ and open the template in the editor.
         </table>
         <div class="space"></div>
 
-
-        <p class="container_p">Факультет электронной техники</p>
-        <table class="table_rait">
+        <table id="p_fet" class="table_rait_prog">
             <tr>
                 <th>Наименование кафедры</th>
                 <th>Прогнозируемое место</th>
@@ -1768,9 +1772,7 @@ and open the template in the editor.
         </table>
         <div class="space"></div>
 
-
-        <p class="container_p">Электромеханический факультет</p>
-        <table class="table_rait">
+        <table id="p_emf" class="table_rait_prog">
             <tr>
                 <th>Наименование факультета</th>
                 <th>Прогнозируемое место</th>
@@ -1798,9 +1800,7 @@ and open the template in the editor.
         </table>
         <div class="space"></div>
 
-
-        <p class="container_p">Экономический факультет</p>
-        <table class="table_rait">
+        <table id="p_ef" class="table_rait_prog">
             <tr>
                 <th>Наименование кафедры</th>
                 <th>Прогнозируемое место</th>
@@ -1836,9 +1836,7 @@ and open the template in the editor.
         </table>
         <div class="space"></div>
 
-
-        <p class="container_p">Юридический факультет</p>
-        <table class="table_rait">
+        <table id="p_uf" class="table_rait_prog">
             <tr>
                 <th>Наименование кафедры</th>
                 <th>Прогнозируемое место</th>

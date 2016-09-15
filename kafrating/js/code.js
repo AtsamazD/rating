@@ -689,6 +689,49 @@ function graphic_asf() {
             }
         }
 
+function selectChangeProg(fak){
+	switch (fak){
+	case 'p_asf':
+		$(".table_rait_prog").css("display", "none");
+		$("#p_asf").css("display", "block");
+		break;		
+	case 'p_ggf':
+		$(".table_rait_prog").css("display", "none");
+		$("#p_ggf").css("display", "block");
+		break;
+	case 'p_mf':
+		$(".table_rait_prog").css("display", "none");
+		$("#p_mf").css("display", "block");
+		break;
+	case 'p_fit':
+		$(".table_rait_prog").css("display", "none");
+		$("#p_fit").css("display", "block");
+		break;
+	case 'p_fpp':
+		$(".table_rait_prog").css("display", "none");
+		$("#p_fpp").css("display", "block");
+		break;
+	case 'p_fet':
+		$(".table_rait_prog").css("display", "none");
+		$("#p_fet").css("display", "block");
+		break;	
+	case 'p_emf':
+		$(".table_rait_prog").css("display", "none");
+		$("#p_emf").css("display", "block");
+		break;
+	case 'p_ef':
+		$(".table_rait_prog").css("display", "none");
+		$("#p_ef").css("display", "block");
+		break;
+	case 'p_uf':
+		$(".table_rait_prog").css("display", "none");
+		$("#p_uf").css("display", "block");
+		break;
+	default:
+		break;
+	}
+}
+		
 function selectChange(fak){
 	switch (fak){
 		case 'asf':

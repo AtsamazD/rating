@@ -29,59 +29,26 @@ a {
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
 }
+*/
+
 
 .logo_back {
-    -webkit-flex-wrap: wrap;
+    display: block;
+	-webkit-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
-    .logo_back:hover .backtogmi {
+.warning:before{
+	content: url('../img/warn24.png');
+	position: relative;
+	z-index:999;
+	top: 7px;
+	margin-right: 10px; 
+}
+
+    .updown:hover .backtogmi_menu {
         display: block;
     }
-
-	*/
-
-.backtogmi {
-    width: auto;
-    margin: auto;
-    color: #1d3347;
-    border: solid 1px #ddd;
-    padding: 8px;
-    display: none;
-    position: absolute;
-    margin-top: 0;
-    background-color: #fff;
-}
-
-.backtogmi_forphone {
-    display: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-    .backtogmi_forphone:hover {
-        cursor: pointer;
-    }
-
-.backtogmi ul {
-    margin: 0;
-    padding: 0;
-}
-
-    .backtogmi ul li {
-        list-style: none;
-        margin: 0;
-        padding: 8px;
-    }
-
-        .backtogmi ul li a {
-            color: black;
-        }
-
-        .backtogmi ul li:hover {
-            text-decoration: underline;
-        }
-
 
 
 .button1 {

@@ -21,15 +21,9 @@ and open the template in the editor.
 <body class="g">    
     <div class="header f-bwi g-row">
         <div class="logo_back f-bwi-pic">
-            <a class="logo_a" href="http://www.skgmi-gtu.ru/">
+            <a class="logo_a" href="http://rating.skgmi-gtu.ru/">
                 <img class="logo_img" alt="Вернуться на сайт СКГМИ" src="img/Logo0000.png" />
-            </a>
-            <div class="backtogmi">
-                <ul>
-                    <li><a href="http://rating.skgmi-gtu.ru/">Вернуться к выбору подразделения</a></li>
-                    <li><a href="http://www.skgmi-gtu.ru/">Вернуться на сайт СКГМИ</a></li>
-                </ul>
-            </div>
+            </a>		            
         </div>
         <div class="header_head f-bwi-text">            
 		
@@ -52,7 +46,7 @@ and open the template in the editor.
     <div id="ratingOnFak" class="ratingOnFak">
 		<div class="g-row">
 			<h3>Интегральный рейтинг кафедр по факультетам</h3>
-			<i>Выберите год и факультет из выпадающих списков:</i>
+			<i class="warning">Выберите год и факультет из выпадающих списков:</i>
 			<select id="select_year" onchange="selectYear()">
 				<option>2015</option>
 				<option>2014</option>
@@ -85,7 +79,7 @@ and open the template in the editor.
 		
 		<div class="g-row css_margin">
 			<h3 id="selYear">Общий интегральный рейтинг кафедр по данным 2015 года</h3>		
-			<i>Выводятся данные за указанный год</i>			
+			<i class="warning">Выводятся данные за указанный год</i>			
 			<div class="otherbr">
 				<table id="t2015" class="table_rait">
 					<tr>
@@ -1545,7 +1539,7 @@ and open the template in the editor.
 
     <div id="container_for_graphics">
         <h3 class="hh3">Графическое представление рейтинга кафедр по факультетам:</h3>
-		<i>Выберите факультет из выпадающего списка: </i>
+		<i class="warning">Выберите факультет из выпадающего списка: </i>
 		<select onchange="selectChange(this.options[this.selectedIndex].value)">
 			<option value="asf">Архитектурно-строительный факультет</option>
 			<option value="ggf">Горно-геологический факультет</option>
@@ -1601,7 +1595,7 @@ and open the template in the editor.
         <!-- прогнозируемые места кафедр-->
 
         <h3 class="hh3">Интегральный прогноз рейтинга кафедры на факультете на 2016 год:</h3>
-		<i>Выберите факультет из выпадающего списка: </i>
+		<i class="warning">Выберите факультет из выпадающего списка: </i>
 		<select id="select_fak_progn" onchange="selectChangeProg(this.options[this.selectedIndex].value)">
 				<option value="p_asf">Архитектурно-строительный факультет</option>
 				<option value="p_ggf">Горно-геологический факультет</option>
@@ -1654,7 +1648,6 @@ and open the template in the editor.
             </tr>
         </table>
         <div class="space"></div>
-
 
         <table id="p_ggf" class="table_rait_prog">
             <tr>
@@ -1881,7 +1874,7 @@ and open the template in the editor.
 
     <div id="statistic">
         <h3 class="hh3">Статистистические данные по указанной кафедре</h3>
-        <i>Начните вводить название кафедры или факультета с учетом регистра...</i>
+        <i class="warning">Начните вводить название кафедры или факультета с учетом регистра...</i>
         <input type="text" id="dep_name_edit" class="edit" />
         <input type="button" id="live_search_button" class="f-bu" onclick="live_search()" value="Поиск" />
 		<br>

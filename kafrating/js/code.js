@@ -788,54 +788,64 @@ function selectChange(fak){
 function yearClick(year) {
             var obj = document.getElementById('selYear');						
             switch (year) {
-                case 'ratings':                    
+                case 'ratings_link':    
+					$("#menu li").removeClass('active');
+					$("#rate").addClass('active');   
+					
                     $("#ratingOnFak").css("display", "block");
                     $("#statistic").css("display", "none");
                     $("#progn").css("display", "none");
                     $("#container_for_graphics").css("display", "none");
-					$("#menu li").removeClass('active');
-					$("#rate").addClass('active');
+					$("#adminForm").css("display", "none");
+					
                     break;
 					
-                case 'ygraph':
+                case 'ygraph_link':
                     graphic_asf();
-                    /*graphic_ggf();
-                    graphic_ef();
-                    graphic_emf();
-                    graphic_fpp();
-                    graphic_fit();
-                    graphic_fet();
-                    graphic_mf();
-                    graphic_uf();
-				*/
                     
 					$("#menu li").removeClass('active');
 					$("#graph").addClass('active');
 					
-                    document.getElementById('ratingOnFak').style.display = "none";
-                    document.getElementById('container_for_graphics').style.display = 'block';
-                    document.getElementById('progn').style.display = "none";
-                    document.getElementById('statistic').style.display = "none";
-
+                    $("#ratingOnFak").css("display", "none");
+					$("#container_for_graphics").css("display", "block");
+                    $("#progn").css("display", "none");
+                    $("#statistic").css("display", "none");
+                    $("#adminForm").css("display", "none");
+					
                     break;
-                case 'yprogn':                    
+                case 'yprogn_link':                    
 					$("#menu li").removeClass('active');
 					$("#prog").addClass('active');
 					
-                    document.getElementById('progn').style.display = "block";
-                    document.getElementById('ratingOnFak').style.display = "none";
-                    document.getElementById('container_for_graphics').style.display = "none";
-                    document.getElementById('statistic').style.display = "none";
-
+                    $("#progn").css("display", "block");
+                    $("#ratingOnFak").css("display", "none");
+                    $("#container_for_graphics").css("display", "none");
+                    $("#statistic").css("display", "none");
+					$("#adminForm").css("display", "none");
+					
                     break;
-                case 'stat':                    
+                case 'stat_link':                    
 					$("#menu li").removeClass('active');
 					$("#stati").addClass('active');
 					
-                    document.getElementById('statistic').style.display = "block";
-                    document.getElementById('progn').style.display = "none";
-                    document.getElementById('ratingOnFak').style.display = "none";
-                    document.getElementById('container_for_graphics').style.display = "none";
+                    $("#statistic").css("display", "block");
+                    $("#progn").css("display", "none");
+                    $("#ratingOnFak").css("display", "none");
+                    $("#container_for_graphics").css("display", "none");
+					$("#adminForm").css("display", "none");
+					
+                    break;
+				case 'admin_link':
+					$("#menu li").removeClass('active');
+					$("#admin").addClass('active');
+					
+                    $("#adminForm").css("display", "block");
+                    $("#progn").css("display", "none");
+                    $("#ratingOnFak").css("display", "none");
+                    $("#container_for_graphics").css("display", "none");
+					$("#statistic").css("display", "none");
+					$(".footer").css("display", "none");
+					
                     break;
                 default:
 
@@ -891,8 +901,8 @@ function yearClick(year) {
         }
 
         function dep_li_remove() {
-            var dep_label = document.getElementById('dep_label');
-            var dep_list = document.getElementById('dep_list');
+            var dep_label = $('#dep_label')[0];
+            var dep_list = $('#dep_list')[0];
             if (dep_list.childElementCount != 0) {
                 while (dep_list.childElementCount != 0)
                     dep_list.removeChild(dep_list.children[0]);
@@ -902,8 +912,8 @@ function yearClick(year) {
 
         function dep_select(li_inner) {
             dep_li_remove();
-            var dep_list = document.getElementById('dep_list');
-            var table = document.getElementById('t2010');
+            var dep_list = $('#dep_list');
+            var table = $('#t2010');
             dep_big_name.innerHTML = 'Сводка по кафедре ' + li_inner + ':';
             search_in_years(li_inner);
 

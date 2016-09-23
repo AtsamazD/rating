@@ -164,6 +164,8 @@ a {
 	width: 60%;
 }
 
+
+
 /*
 .ratingOnFak, .container_for_graphics, .progn {
     height: auto;
@@ -221,18 +223,37 @@ a {
 	margin-top: 20px;
 }
 
-/*
-#graphic, #graphic_attend, #graphic_uspev,
-#graphic_zp, #graphic_asp, #graphic_badRait,
-#graphic_fin, #graphic_lowMark {
-    width: 600px;
-    height: 400px;   
-}
-*/
-
-
-#progn, #statistic, #container_for_graphics {
+#progn, #statistic, #container_for_graphics, #adminForm {
     display: none;
+}
+
+.admin_panel_log{
+
+}
+
+.rightBTN{
+
+}
+
+.backShadow{
+
+}
+
+#adminForm{
+	width: 600px;
+	margin: auto;
+}
+
+#adminForm table{
+	
+}
+
+#adminForm table td{
+	border:0;
+}
+
+.column1{
+	text-align: right;
 }
 
 /*

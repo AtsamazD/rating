@@ -33,10 +33,11 @@ and open the template in the editor.
 			</div>
 			
             <ul class="f-nav f-nav-tabs menu" id="menu">
-                <li id="rate" class="active"><a id="ratings" onclick="yearClick(this.id)">Интегральный рейтинг</a></li>
-                <li id="graph"><a id="ygraph" onclick="yearClick(this.id)">Графики</a></li>
-                <li id="prog"><a id="yprogn" onclick="yearClick(this.id)">Прогноз</a></li>
-                <li id="stati"><a id="stat" onclick="yearClick(this.id)">Статистика</a></li>                
+                <li id="rate" class="active"><a id="ratings_link" onclick="yearClick(this.id)">Интегральный рейтинг</a></li>
+                <li id="graph"><a id="ygraph_link" onclick="yearClick(this.id)">Графики</a></li>
+                <li id="prog"><a id="yprogn_link" onclick="yearClick(this.id)">Прогноз</a></li>
+                <li id="stati"><a id="stat_link" onclick="yearClick(this.id)">Статистика</a></li> 
+				<li id="admin"><a id="admin_link" onclick="yearClick(this.id)">Администрирование</a></li>
             </ul>
         
     </div>
@@ -1895,6 +1896,27 @@ and open the template in the editor.
         </div>
     </div>
 
+	<div id="adminForm">
+	<form id="admin_login" class="admin_panel_log">
+	<h2>Входные данные</h2>
+	<hr>
+		<table>
+			<tr>
+				<td class="column1">Псевдоним администратора:</td>
+				<td><input type="text" name="login" value=""> </td>
+			</tr>
+			<tr>
+				<td class="column1">Пароль:</td>
+				<td><input type="password"  name="passw" value=""></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Войти" class="f-bu"></td>
+			</tr>
+		</table>
+	</form>
+	</div>
+	
 	<hr>
     <div class="footer">
         <p class="prikaz">
@@ -1914,7 +1936,8 @@ and open the template in the editor.
         </ul>
         <a class="" href="criterion_dep.xlsx">Скачать файл с исходными данными критериев в формате .xlsx</a>
     </div>
-	<hr>
+
+	
 </body>
 
 </html>

@@ -55,42 +55,6 @@ a {
     display: none;
 }
 
-/*	
-.header h5 {
-    color: white;
-    margin: 0 0 10px 2px;
-    padding-top: 8px;
-}
-
-.header h4 {
-    color: white;
-    margin: 0 0 10px 2px;
-    padding: 0;
-}
-
-.logo_rait {
-    color: #192A78;
-    padding: 4px;
-    background-color: white;
-}
-
-.logo_img {
-    max-width: 180px;
-    max-height: 170px;
-    padding-top: 20px;   
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.logo_skgmi {
-    color: white;
-    font-size: x-large;
-    margin-top: 0;
-}
-
-*/
-
-
 .menu {
     padding-top: 0px;       
     margin-bottom: 0;
@@ -164,31 +128,6 @@ a {
 	width: 60%;
 }
 
-
-
-/*
-.ratingOnFak, .container_for_graphics, .progn {
-    height: auto;
-    padding: 10px;
-    background-color: white;
-}
-
-.table_rait th {
-    color: white;
-    border: 1px solid #192A78;
-    padding: 4px;
-    background: #192A78;
-}
-
-.table_rait td {
-    color: black;
-    border: 1px solid #ddd;
-    padding: 4px;
-    background: white;
-}
-
-*/
-
 #p_ggf, #p_mf, #p_fit, #p_fpp, #p_fet, #p_emf, #p_ef, #p_uf
 {
 	display: none;
@@ -250,6 +189,10 @@ a {
 
 #adminForm table td{
 	border:0;
+}
+
+#adminForm table tr:hover td{
+	background-color: #fff;
 }
 
 .column1{
